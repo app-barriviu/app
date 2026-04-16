@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BV App - Afegir Amic</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app-container">
+    <div class="scrollable-content">
+        <header class="header-amic">
+            <div class="btn-back-blue" onclick="window.history.back()">
+                <i class="fas fa-arrow-left"></i>
+            </div>
+            <h2>Afegeix a un amic</h2>
+        </header>
+
+        <div class="search-container">
+            <input type="text" placeholder="Busca al teu amic..." class="search-input">
+        </div>
+
+        <div class="suggestions-section">
+            <h3>Suggerències</h3>
+
+            <div class="friend-card">
+                <div class="friend-info">
+                    <img src="https://via.placeholder.com/50" alt="Nil" class="friend-img">
+                    <div class="friend-text">
+                        <span class="friend-name">Nil siñol</span>
+                        <span class="friend-mutual">(Teniu 3 amics en comú)</span>
+                    </div>
+                </div>
+                <button class="btn-add-circle" onclick="toggleAdd(this)"><i class="fas fa-plus"></i></button>
+            </div>
+
+            <div class="friend-card">
+                <div class="friend-info">
+                    <img src="https://via.placeholder.com/50" alt="Mario" class="friend-img">
+                    <div class="friend-text">
+                        <span class="friend-name">Mario Perelló</span>
+                        <span class="friend-mutual">(Teniu 2 amics en comú)</span>
+                    </div>
+                </div>
+                <button class="btn-add-circle" onclick="toggleAdd(this)"><i class="fas fa-plus"></i></button>
+            </div>
+
+            <div class="friend-card">
+                <div class="friend-info">
+                    <img src="https://via.placeholder.com/50" alt="Marc" class="friend-img">
+                    <div class="friend-text">
+                        <span class="friend-name">Marc Reus</span>
+                        <span class="friend-mutual">(Teniu 1 amics en comú)</span>
+                    </div>
+                </div>
+                <button class="btn-add-circle" onclick="toggleAdd(this)"><i class="fas fa-plus"></i></button>
+            </div>
+
+            <div class="friend-card">
+                <div class="friend-info">
+                    <img src="https://via.placeholder.com/50" alt="Carla" class="friend-img">
+                    <div class="friend-text">
+                        <span class="friend-name">Carla Gómez</span>
+                        <span class="friend-mutual">(Teniu 5 amics en comú)</span>
+                    </div>
+                </div>
+                <button class="btn-add-circle" onclick="toggleAdd(this)"><i class="fas fa-plus"></i></button>
+            </div>
+
+            <div class="friend-card">
+                <div class="friend-info">
+                    <img src="https://via.placeholder.com/50" alt="Pau" class="friend-img">
+                    <div class="friend-text">
+                        <span class="friend-name">Pau Soler</span>
+                        <span class="friend-mutual">(Teniu 4 amics en comú)</span>
+                    </div>
+                </div>
+                <button class="btn-add-circle" onclick="toggleAdd(this)"><i class="fas fa-plus"></i></button>
+            </div>
+
+            <div class="friend-card">
+                <div class="friend-info">
+                    <img src="https://via.placeholder.com/50" alt="Laura" class="friend-img">
+                    <div class="friend-text">
+                        <span class="friend-name">Laura Martínez</span>
+                        <span class="friend-mutual">(Teniu 2 amics en comú)</span>
+                    </div>
+                </div>
+                <button class="btn-add-circle" onclick="toggleAdd(this)"><i class="fas fa-plus"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <nav class="bottom-nav">
+        <i class="fas fa-home" onclick="location.href='index.html'"></i>
+        <i class="fas fa-map-marker-alt" onclick="location.href='mapa.html'"></i>
+        <div class="nav-plus" onclick="location.href='organizador.html'"><i class="fas fa-plus"></i></div>
+        <i class="fas fa-heart active-icon" onclick="location.href='seguint.html'"></i>
+        <i class="fas fa-user" onclick="location.href='configuracio.html'"></i>
+    </nav>
+</div>
+
+<script>
+function toggleAdd(btn) {
+    // Si ya está añadido, lo quitamos (opcional)
+    if (btn.classList.contains('added')) {
+        btn.classList.remove('added');
+        btn.innerHTML = '<i class="fas fa-plus"></i>';
+        btn.style.backgroundColor = '#1D4ED8';
+    } else {
+        // Estado "Añadido"
+        btn.classList.add('added');
+        btn.innerHTML = '<i class="fas fa-check"></i>';
+        btn.style.backgroundColor = '#22c55e'; // Verde de confirmación
+    }
+}
+</script>
+
+
+
+
+
+</body>
+</html>

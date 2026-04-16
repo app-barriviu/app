@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BV App - Perfil</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app-container">
+    <div class="scrollable-content">
+        <header class="header-simple">
+            <h2>Perfil</h2>
+        </header>
+
+        <div class="profile-header">
+            <div class="avatar-container">
+                <img src="https://via.placeholder.com/100" alt="Profile" class="avatar-img">
+            </div>
+            <h3 class="profile-name">Júlia Pérez</h3>
+            <p class="profile-location">Cornellà de Llobregat</p>
+            <p class="profile-date">Membre des de 2025</p>
+            <hr class="divider">
+        </div>
+
+        <div class="stats-row">
+            <div class="stat-card">
+                <i class="fas fa-check-circle icon-blue"></i>
+                <span class="stat-value">20</span>
+                <span class="stat-label">Activitats asistides</span>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-bell icon-blue"></i>
+                <span class="stat-value">15</span>
+                <span class="stat-label">Pròximes</span>
+            </div>
+            <a href="rangos.html" class="stat-card clickable-card">
+                <span class="stat-logo-bv">BV</span>
+                <span class="stat-value small">Llegenda del Baix</span>
+                <span class="stat-label">Nivell</span>
+            </a>
+        </div>
+
+        <div class="settings-list">
+            <div class="settings-item" onclick="location.href='crear_activitat.html'">
+                <div class="item-left">
+                    <div class="icon-wrapper"><i class="fas fa-calendar-plus"></i></div>
+                    <span>Crear Activitat</span>
+                </div>
+                <i class="fas fa-chevron-right arrow"></i>
+            </div>
+
+            <div class="settings-item" onclick="location.href='missatges.html'">
+                <div class="item-left">
+                    <div class="icon-wrapper"><i class="fas fa-envelope"></i></div>
+                    <span>Missatges</span>
+                </div>
+                <i class="fas fa-chevron-right arrow"></i>
+            </div>
+
+            <div class="settings-item" onclick="location.href='organizador.html'">
+                <div class="item-left">
+                    <div class="icon-wrapper"><i class="fas fa-calendar-alt"></i></div>
+                    <span>Panell Organitzador</span>
+                </div>
+                <i class="fas fa-chevron-right arrow"></i>
+            </div>
+
+            <div class="settings-item" onclick="location.href='config.html'">
+                <div class="item-left">
+                    <div class="icon-wrapper bg-blue"><i class="fas fa-cog"></i></div>
+                    <span>Configuració</span>
+                </div>
+                <i class="fas fa-chevron-right arrow"></i>
+            </div>
+        </div>
+
+        <button class="btn-add-friend"><i class="fas fa-plus"></i> Afegir a un amic</button>
+        
+        <button class="btn-logout-outline">
+            <i class="fas fa-sign-out-alt"></i> Tancar Sessió
+        </button>
+    </div>
+
+    <nav class="bottom-nav">
+        <i class="fas fa-home" onclick="location.href='index.html'"></i>
+        <i class="fas fa-map-marker-alt" onclick="location.href='mapa.html'"></i>
+        <div class="nav-plus" onclick="location.href='crear.html'"><i class="fas fa-plus"></i></div>
+        <i class="fas fa-heart" onclick="location.href='favorits.html'"></i>
+        <i class="fas fa-user active-icon"></i>
+    </nav>
+</div>
+
+</body>
+</html>

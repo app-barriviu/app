@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BV App - Crear Activitat</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app-container">
+    <div class="scrollable-content">
+        <header class="header-crear">
+            <i class="fas fa-arrow-left" onclick="location.href='index.html'"></i>
+            <h2>Crear Activitat</h2>
+            <i class="fas fa-check" style="color: #007AFF;" onclick="location.href='index.html'"></i>
+        </header>
+
+        <form class="create-form">
+            <div class="image-selector">
+                <i class="fas fa-camera"></i>
+                <p>Selecciona una imatge</p>
+            </div>
+
+            <div class="form-group">
+                <label>Nom de l'activitat</label>
+                <input type="text" placeholder="Escriu el nom de la teva activitat...">
+            </div>
+
+            <div class="form-group">
+                <label>Descripció</label>
+                <textarea placeholder="Descripció de l'activitat..."></textarea>
+            </div>
+
+            <div class="form-group" onclick="alert('Obrint selector de data...')">
+                <label>Data</label>
+                <div class="input-simulated">Hora <i class="fas fa-chevron-right"></i></div>
+            </div>
+
+            <div class="form-group" onclick="alert('Obrint categories...')">
+                <label>Categoria</label>
+                <div class="input-simulated">Tria una categoria <i class="fas fa-chevron-right"></i></div>
+            </div>
+
+            <div class="form-group" onclick="alert('Obrint mapa...')">
+                <label>Ubicació</label>
+                <div class="input-simulated">Indica la ubicació <i class="fas fa-chevron-right"></i></div>
+            </div>
+
+            <button type="button" class="btn-publicar" onclick="location.href='index.html'">Publicar</button>
+        </form>
+    </div>
+
+    <nav class="bottom-nav">
+        <i class="fas fa-home" onclick="location.href='index.html'"></i>
+        <i class="fas fa-map-marker-alt" onclick="location.href='mapa.html'"></i>
+        <div class="nav-plus active-icon" onclick="location.href='organizador.html'"><i class="fas fa-plus"></i></div>
+        <i class="fas fa-heart" onclick="location.href='seguint.html'"></i>
+        <i class="fas fa-user" onclick="location.href='configuracio.html'"></i>
+    </nav>
+
+    
+</div>
+
+</body>
+</html>

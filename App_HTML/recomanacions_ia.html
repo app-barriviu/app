@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BV App - Recomanacions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app-container">
+    <div class="scrollable-content">
+        <header class="header-chat-ia">
+            <button class="btn-back-simple" onclick="history.back()">
+                <i class="fas fa-arrow-left"></i>
+            </button>
+            <div class="chat-title-wrapper">
+                <span class="logo-small-blue">BV</span>
+                <h2 class="chat-title">Xat amb IA</h2>
+            </div>
+            <i class="fas fa-ellipsis-h menu-dots"></i>
+        </header>
+
+        <div class="chat-body">
+            <div class="ia-message-row">
+                <div class="ia-avatar-circle"></div>
+                <div class="ia-bubble">Hola! Sóc el teu assistent, com et puc ajudar?</div>
+            </div>
+
+            <div class="user-message-row">
+                <div class="user-bubble">Què em recomanes per avui?</div>
+            </div>
+
+            <div class="ia-list-container">
+                <p class="ia-subtitle-text">Aquesta és la meva llista d'esdeveniments per a tu:</p>
+                
+                <div class="ia-bubble event-card">
+                    <strong>NIT DE DJ'S</strong><br>
+                    Divendres 27 - 23:00 h<br>
+                    Festa nocturna amb diferents DJ's.
+                </div>
+                
+                <div class="ia-bubble event-card">
+                    <strong>CORREFOC</strong><br>
+                    Divendres 27 - 20:00 h<br>
+                    Festa major amb correfoc tradicional.
+                </div>
+
+                <div class="ia-message-row last-card-fix">
+                    <div class="ia-avatar-circle"></div>
+                    <div class="ia-bubble event-card">
+                        <strong>RUTA BTT</strong><br>
+                        Divendres 27 - 9:00 h<br>
+                        Sortida en bicicleta de muntanya.
+                    </div>
+                </div>
+            </div>
+
+            <div class="ia-suggestions-horizontal">
+                <button class="btn-suggestion-blue-light">Veure agenda</button>
+                <button class="btn-suggestion-blue-light">Buscar activitats</button>
+            </div>
+        </div>
+        
+        <div style="height: 150px;"></div>
+    </div>
+
+    <div class="chat-input-container">
+        <div class="input-wrapper">
+            <i class="fas fa-plus icon-plus-chat"></i>
+            <input type="text" placeholder="Escriu la teva pregunta..." class="input-ia">
+            <button class="btn-send-ia">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <nav class="bottom-nav">
+        <i class="fas fa-home" onclick="location.href='index.html'"></i>
+        <i class="fas fa-map-marker-alt"></i>
+        <div class="nav-plus"><i class="fas fa-plus"></i></div>
+        <i class="fas fa-heart"></i>
+        <i class="fas fa-user"></i>
+    </nav>
+</div>
+
+</body>
+</html>

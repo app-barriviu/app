@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BV App - Xat amb IA</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app-container">
+    <div class="scrollable-content">
+        <header class="header-chat-ia">
+            <button class="btn-back-simple" onclick="history.back()">
+                <i class="fas fa-arrow-left"></i>
+            </button>
+            <div class="chat-title-wrapper">
+                <span class="logo-small-blue">BV</span>
+                <h2 class="chat-title">Xat amb IA</h2>
+            </div>
+            <i class="fas fa-ellipsis-h menu-dots"></i>
+        </header>
+
+        <div class="chat-body">
+            <div class="ia-message-row">
+                <div class="ia-avatar-circle"></div>
+                <div class="ia-bubble">
+                    Hola! Sóc el teu assistent, com et puc ajudar?
+                </div>
+            </div>
+
+            <div class="ia-suggestions-container">
+                <button class="btn-suggestion" onclick="location.href='concerts_ia.html'">
+    Quins concerts hi ha aquest cap de setmana?
+</button>
+                <button class="btn-suggestion" onclick="location.href='recomanacions_ia.html'">
+                    Què em recomanes per avui?
+                </button>
+                <button class="btn-suggestion" onclick="location.href='esports_ia.html'">
+                    Quins events esportius hi ha per aquí a prop?
+                </button>
+            </div>
+        </div>
+
+        <div class="chat-input-fixed">
+            <div class="input-wrapper-styled">
+                <i class="fas fa-plus icon-plus"></i>
+                <input type="text" placeholder="Escriu la teva pregunta..." class="input-field">
+                <button class="btn-send-blue">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <nav class="bottom-nav">
+        <i class="fas fa-home" onclick="location.href='index.html'"></i>
+        <i class="fas fa-map-marker-alt" onclick="location.href='mapa.html'"></i>
+        <div class="nav-plus"><i class="fas fa-plus"></i></div>
+        <i class="fas fa-heart" onclick="location.href='seguint.html'"></i>
+        <i class="fas fa-user" onclick="location.href='perfil.html'"></i>
+    </nav>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BV App - Esports IA</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app-container">
+    <div class="scrollable-content">
+        <header class="header-chat-ia">
+            <button class="btn-back-simple" onclick="history.back()">
+                <i class="fas fa-arrow-left"></i>
+            </button>
+            <div class="chat-title-wrapper">
+                <span class="logo-small-blue">BV</span>
+                <h2 class="chat-title">Xat amb IA</h2>
+            </div>
+            <i class="fas fa-ellipsis-h menu-dots"></i>
+        </header>
+
+        <div class="chat-body">
+            <div class="ia-message-row">
+                <div class="ia-avatar-circle"></div>
+                <div class="ia-bubble">Hola! Sóc el teu assistent, com et puc ajudar?</div>
+            </div>
+
+            <div class="user-message-row">
+                <div class="user-bubble">Quins events esportius hi ha per aquí a prop?</div>
+            </div>
+
+            <div class="ia-list-container">
+                <div class="ia-bubble concert-detail">
+                    Aquest cap de setmana al Baix Llobregat hi ha diversos esdeveniments esportius destacats:
+                </div>
+                
+                <div class="ia-bubble event-card">
+                    <strong>FUTBOL</strong> &nbsp; Dissabte 28 - 18:30<br>
+                    <strong>Cornellà vs Sabadell</strong><br>
+                    Estadi Municipal de Cornellà.
+                </div>
+                
+                <div class="ia-bubble event-card">
+                    <strong>CICLISME</strong> &nbsp; Diumenge 29 - 09:00<br>
+                    <strong>Marxa Cicloturista del Baix Llobregat</strong><br>
+                    Sortida des de Sant Joan Despí.
+                </div>
+
+                <div class="ia-message-row last-card-fix">
+                    <div class="ia-avatar-circle"></div>
+                    <div class="ia-bubble event-card">
+                        <strong>BÀSQUET</strong> &nbsp; Diumenge 29 - 12:00<br>
+                        <strong>CB l'Hospitalet vs CB Sant Josep Costa</strong><br>
+                        Pavelló Municipal de l'Hospitalet.
+                    </div>
+                </div>
+            </div>
+
+            <p class="follow-up-text">Vols més informació sobre algun d'ells?</p>
+        </div>
+        
+        <div style="height: 150px;"></div>
+    </div>
+
+    <div class="chat-input-container">
+        <div class="input-wrapper">
+            <i class="fas fa-plus icon-plus-chat"></i>
+            <input type="text" placeholder="Escriu la teva pregunta..." class="input-ia">
+            <button class="btn-send-ia">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <nav class="bottom-nav">
+        <i class="fas fa-home" onclick="location.href='index.html'"></i>
+        <i class="fas fa-map-marker-alt" onclick="location.href='mapa.html'"></i>
+        <div class="nav-plus"><i class="fas fa-plus"></i></div>
+        <i class="fas fa-heart" onclick="location.href='seguint.html'"></i>
+        <i class="fas fa-user" onclick="location.href='perfil.html'"></i>
+    </nav>
+</div>
+
+</body>
+</html>

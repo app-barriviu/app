@@ -1,0 +1,2046 @@
+:root {
+    --primary-blue: #0047ff;
+    --bg-gray: #f2f2f2;
+    --img-red: #e63946;
+    --nav-gray: #e0e0e0;
+}
+
+* { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+    font-family: 'Segoe UI', sans-serif; 
+}
+
+body {
+    background-color:;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app-container {
+    width: 500px;
+    height: 100%;
+    background: var(--bg-gray);
+    border-radius: 40px;
+    overflow: hidden;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+}
+
+/* Scroll solo para el contenido de la Home */
+.scrollable-content {
+    height: 100%;
+    overflow-y: auto;
+    padding: 30px 20px 100px 20px;
+}
+
+.scrollable-content::-webkit-scrollbar { display: none; };
+
+/* Header & Utils */
+header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px; }
+.logo { color: var(--primary-blue); font-weight: 900; font-size: 26px; }
+.avatar { width: 45px; height: 45px; border-radius: 50%; background: var(--img-red); }
+.subtitle { color: #777; margin-bottom: 25px; }
+
+/* Categorías */
+.categories { display: flex; gap: 10px; overflow-x: auto; margin-bottom: 30px; }
+.pill { background: #ddd; padding: 10px 18px; border-radius: 20px; font-size: 13px; white-space: nowrap; cursor: pointer; }
+.pill.active { background: #ccc; }
+
+/* Cards con fondo rojo */
+.main-event-card {
+    width: 100%; height: 200px; border-radius: 25px;
+    background: linear-gradient(rgba(230,57,70,0.4), rgba(230,57,70,0.9)), url('https://via.placeholder.com/400x200');
+    background-color: var(--img-red); background-size: cover;
+    position: relative; padding: 20px; color: white; margin-bottom: 30px;
+}
+
+.date-badge { background: white; color: black; width: 45px; padding: 8px; border-radius: 12px; text-align: center; font-size: 12px; }
+
+.recomanats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.small-card {
+    height: 140px; border-radius: 20px; background: var(--img-red);
+    padding: 12px; color: white; display: flex; flex-direction: column; justify-content: space-between;
+}
+.tag { font-size: 9px; background: rgba(0,0,0,0.2); padding: 4px 8px; border-radius: 6px; width: fit-content; }
+
+/* Seccion Mapa Inicio */
+.map-preview {
+    width: 100%; height: 110px; background: white; border-radius: 20px;
+    border: 1px solid #ddd; margin-bottom: 30px; position: relative; cursor: pointer;
+}
+.btn-map { position: absolute; bottom: 10px; right: 10px; background: var(--primary-blue); color: white; border: none; padding: 8px 15px; border-radius: 12px; font-size: 12px; cursor: pointer; }
+
+/* PANTALLA MAPA FULL */
+.map-full-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; }
+.map-overlay-red { width: 100%; height: 100%; background: var(--img-red); opacity: 0.2; }
+
+.bottom-sheet {
+    position: absolute; bottom: 70px; left: 0; width: 100%;
+    background: #fdfdfd; border-top-left-radius: 30px; border-top-right-radius: 30px;
+    padding: 15px 25px 40px 25px; z-index: 5; box-shadow: 0 -10px 20px rgba(0,0,0,0.05);
+}
+.drag-handle { width: 40px; height: 5px; background: #ddd; border-radius: 10px; margin: 0 auto 20px auto; }
+.event-item { display: flex; gap: 15px; margin-bottom: 20px; align-items: center; }
+.mini-img-red { width: 65px; height: 65px; border-radius: 15px; background: var(--img-red); }
+.dist { color: var(--primary-blue); font-weight: bold; font-size: 12px; }
+
+/* Navegación Fija */
+.bottom-nav {
+    position: absolute; bottom: 0; left: 0; width: 100%; height: 75px;
+    background: var(--nav-gray); display: flex; justify-content: space-around;
+    align-items: center; z-index: 10; border-top: 1px solid #ccc;
+}
+.bottom-nav i { font-size: 22px; color: #333; opacity: 0.5; cursor: pointer; }
+.bottom-nav i.active-icon { opacity: 1; color: black; }
+.nav-plus { background: var(--primary-blue); width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white !important; margin-top: -15px; }
+
+.btn-help { width: 100%; background: var(--primary-blue); color: white; border: none; padding: 18px; border-radius: 30px; font-weight: bold; margin-top: 20px; cursor: pointer; }
+
+/* Estilos específicos para la pantalla Seguint */
+.header-seguint {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.btn-back {
+    background: var(--primary-blue);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+/* Stories */
+.stories-container {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+}
+
+.stories-container::-webkit-scrollbar { display: none; }
+
+.story-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 80px;
+    text-align: center;
+}
+
+.story-circle {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background: var(--img-red); /* Fondo rojo solicitado */
+    border: 2px solid #ddd;
+    position: relative;
+    margin-bottom: 8px;
+}
+
+.story-item span {
+    font-size: 11px;
+    color: #333;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 70px;
+}
+
+.badge {
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    background: var(--primary-blue);
+    color: white;
+    font-size: 10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid white;
+}
+
+/* Feed Cards */
+.feed-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.feed-card {
+    width: 100%;
+    height: 220px;
+    border-radius: 25px;
+    background: var(--img-red); /* Fondo rojo solicitado */
+    /* Aquí podrías añadir una imagen real con background-image */
+    background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.7)), var(--img-red);
+    position: relative;
+    overflow: hidden;
+}
+
+.card-content {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+}
+
+.location-tag {
+    font-size: 12px;
+    opacity: 0.9;
+}
+
+.feed-card h3 {
+    font-size: 20px;
+    margin: 5px 0;
+}
+
+.feed-card p {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+/* --- PERFIL STYLES --- */
+.profile-header {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.profile-avatar {
+    width: 100px;
+    height: 100px;
+    background-color: var(--red); /* Fondo rojo solicitado */
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    border: 3px solid white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.profile-header h2 { font-size: 22px; margin-bottom: 5px; }
+.profile-sub { font-size: 12px; color: #888; line-height: 1.4; }
+
+.profile-divider {
+    border: 0;
+    height: 1px;
+    background: #ddd;
+    margin: 20px 0;
+}
+
+/* Stats */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.stat-card {
+    background: white;
+    padding: 15px 5px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.stat-num { font-weight: bold; font-size: 18px; margin: 5px 0; }
+.stat-label { font-size: 9px; color: #666; text-transform: uppercase; }
+.check-icon { color: var(--blue); font-size: 20px; }
+.bell-icon { color: var(--blue); font-size: 20px; }
+.logo-small { color: var(--red); font-weight: 900; font-size: 16px; }
+.stat-title { font-size: 10px; font-weight: bold; }
+
+/* Menú */
+.menu-container {
+    background: white;
+    border-radius: 20px;
+    border: 1px solid #e0eaff;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid #f0f0f0;
+    cursor: pointer;
+}
+
+.menu-item.last { border-bottom: none; }
+
+.menu-left { display: flex; align-items: center; gap: 15px; }
+.menu-left span { font-size: 14px; font-weight: 500; }
+.menu-icon.blue { color: var(--blue); font-size: 18px; }
+.arrow { color: #ccc; font-size: 12px; }
+
+/* Botones Perfil */
+.btn-add-friend {
+    width: 60%;
+    background: var(--blue);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 25px;
+    margin: 0 auto 15px;
+    display: block;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.btn-logout {
+    width: 100%;
+    background: white;
+    color: var(--red);
+    border: 1px solid var(--red);
+    padding: 12px;
+    border-radius: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+/* --- ESTILOS DETALLE EVENTO --- */
+.no-padding { padding: 0 !important; }
+
+.event-header-img {
+    width: 100%;
+    height: 300px;
+    background-color: var(--red); /* Tu fondo rojo */
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.8)), url('https://via.placeholder.com/400x300');
+    background-size: cover;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.btn-back-float {
+    width: 40px;
+    height: 40px;
+    background: var(--blue);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.event-overlay { color: white; }
+.category-pill-white {
+    background: white;
+    color: black;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.event-overlay h2 { margin-top: 10px; font-size: 22px; }
+
+/* Barra de iconos */
+.quick-info-bar {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 20px;
+    background: white;
+    border-bottom: 1px solid #eee;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.info-item i { color: var(--blue); font-size: 20px; }
+.info-item span { font-size: 11px; color: #666; font-weight: bold; }
+
+/* Contenido */
+.event-body { padding: 25px 20px; }
+.desc-section { margin-bottom: 25px; }
+.desc-section h3 { font-size: 18px; margin-bottom: 10px; }
+.desc-section p, .desc-section li { 
+    font-size: 14px; 
+    color: #444; 
+    line-height: 1.6; 
+    margin-bottom: 10px;
+}
+
+.asistents-row { display: flex; align-items: center; gap: 12px; margin-top: 10px; }
+.asistents-avatars { display: flex; }
+.mini-avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid white;
+    margin-right: -10px;
+}
+.mini-avatar.red { background: var(--red); }
+.mini-avatar.blue { background: var(--blue); }
+
+.btn-apuntar {
+    width: 100%;
+    background: #a9cdf3; /* Color azul claro de la imagen */
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+/* Variación para deportes */
+.sports-bg {
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.7)), url('https://via.placeholder.com/400x300/e63946/ffffff?text=Futbol+Red');
+    /* He puesto el placeholder en rojo como pediste, pero con el texto de Futbol */
+}
+
+.sports-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.sports-list li {
+    margin-bottom: 12px;
+    padding-left: 15px;
+    position: relative;
+}
+
+.sports-list li::before {
+    content: "•";
+    color: var(--blue);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+
+/* --- ESTILOS PANELL ORGANITZADOR --- */
+.stats-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.summary-card {
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid #e0eaff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 140px;
+}
+
+.summary-val {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.summary-text {
+    font-size: 13px;
+    color: #333;
+    font-weight: 500;
+}
+
+.activity-list {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.activity-row {
+    background: white;
+    padding: 15px 20px;
+    border-radius: 15px;
+    border: 1px solid #e0eaff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.activity-info h4 { font-size: 15px; margin-bottom: 4px; }
+.activity-info p { font-size: 12px; color: #777; }
+
+/* Etiquetas de estado */
+.status-pill {
+    padding: 6px 15px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.active-pill {
+    background-color: #cce0ff;
+    color: var(--blue);
+}
+
+.propera-pill {
+    background-color: var(--blue);
+    color: white;
+}
+:root {
+    --primary-blue: #0047ff;
+    --light-blue-bg: #e6efff;
+    --border-blue: #ccd9ff;
+    --red-bg: #e63946;
+    --text-dark: #1a1a1a;
+    --text-gray: #757575;
+}
+
+/* --- Estructura Global --- */
+.header-inline { display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px; }
+.title-bold { font-size: 24px; font-weight: 800; color: var(--text-dark); }
+.subtitle-thin { font-size: 14px; color: var(--text-gray); }
+
+/* --- Panel Organizador (Captura 7) --- */
+.organizer-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 30px; }
+.stat-box {
+    background: white; border: 1.5px solid var(--border-blue); border-radius: 20px;
+    padding: 20px; height: 145px; display: flex; flex-direction: column; justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 71, 255, 0.03);
+}
+.stat-big-val { font-size: 32px; font-weight: 800; color: var(--text-dark); margin-bottom: 8px; }
+.stat-desc { font-size: 13px; font-weight: 600; color: var(--text-dark); }
+
+.activity-card-row {
+    background: white; border: 1.5px solid var(--border-blue); border-radius: 18px;
+    padding: 16px 20px; display: flex; justify-content: space-between; align-items: center;
+    margin-bottom: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+}
+.activity-texts h4 { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+.activity-texts p { font-size: 12px; color: var(--text-gray); }
+
+.badge-status { padding: 6px 16px; border-radius: 12px; font-size: 12px; font-weight: 700; min-width: 85px; text-align: center; }
+.badge-status.light-blue { background: var(--light-blue-bg); color: var(--primary-blue); }
+.badge-status.solid-blue { background: var(--primary-blue); color: white; }
+
+/* --- Missatges (Captura 8) --- */
+.styled-search-input {
+    width: 100%; padding: 14px 25px; border-radius: 30px; border: 1.5px solid var(--primary-blue);
+    background: white; font-size: 14px; color: var(--text-dark); margin-bottom: 25px; outline: none;
+}
+.message-card {
+    background: white; border: 1.5px solid var(--border-blue); border-radius: 18px;
+    padding: 14px; display: flex; align-items: center; gap: 14px; margin-bottom: 12px;
+}
+.msg-avatar-placeholder { width: 52px; height: 52px; border-radius: 50%; background: var(--red-bg); flex-shrink: 0; }
+.msg-content { flex-grow: 1; }
+.msg-top { display: flex; justify-content: space-between; align-items: center; }
+.msg-name { font-size: 15px; font-weight: 700; color: var(--primary-blue); }
+.msg-time { font-size: 11px; font-weight: 700; color: var(--primary-blue); }
+.msg-bottom { display: flex; justify-content: space-between; align-items: center; margin-top: 4px; }
+.msg-preview { font-size: 13px; color: var(--text-gray); }
+.msg-counter {
+    width: 24px; height: 24px; border-radius: 50%; background: var(--light-blue-bg);
+    border: 1.5px solid var(--primary-blue); color: var(--primary-blue);
+    font-size: 11px; font-weight: 800; display: flex; align-items: center; justify-content: center;
+}
+
+/* --- Botones y Extras --- */
+.btn-back-circle-blue {
+    background: var(--primary-blue); color: white; border: none; width: 38px; height: 38px;
+    border-radius: 12px; display: flex; align-items: center; justify-content: center; cursor: pointer;
+}
+.header-avatar-red { width: 42px; height: 42px; border-radius: 50%; background: var(--red-bg); }
+
+/* --- Millores per a Missatges amb Scroll --- */
+
+/* Contenidor principal per evitar que el header i cercador es moguin (opcional) */
+.fixed-header-layout {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Àrea de scroll específica per als missatges */
+.messages-scroll-area {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding-right: 5px; /* Espai per a la barra de scroll */
+    margin-bottom: 10px;
+}
+
+/* Estilitzar la barra de scroll per fer-la subtil */
+.messages-scroll-area::-webkit-scrollbar {
+    width: 4px;
+}
+
+.messages-scroll-area::-webkit-scrollbar-thumb {
+    background: var(--border-blue);
+    border-radius: 10px;
+}
+
+/* Assegurar que les targetes de missatges tenen el marge correcte */
+.message-card {
+    background: white;
+    border: 1px solid var(--border-blue);
+    border-radius: 18px;
+    padding: 14px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 12px;
+    transition: transform 0.2s;
+}
+
+.message-card:active {
+    transform: scale(0.98);
+}
+
+.btn-suggestion {
+    background: #a1c1ff; /* El azul claro de la captura */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 25px;
+    font-size: 13px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s; /* Transición suave */
+    width: 100%; /* Para que ocupen el ancho del contenedor */
+}
+
+/* Efecto al pasar el ratón o pulsar con el dedo */
+.btn-suggestion:active {
+    background-color: #8db3f0; 
+    transform: scale(0.98); /* Se encoge un poco al pulsar */
+}
+
+/* --- XAT AMB IA (DETALLS IMATGE) --- */
+
+.header-chat-ia {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 25px;
+}
+
+.ia-message-row {
+    display: flex;
+    align-items: center; /* Alineat al centre com a la foto */
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.ia-avatar-circle {
+    width: 32px;
+    height: 32px;
+    background-color: #b38884; /* Color marró de la captura */
+    border-radius: 50%;
+}
+
+.ia-bubble {
+    background: white;
+    border: 1px solid #dcdcdc;
+    padding: 12px 20px;
+    border-radius: 20px;
+    font-size: 15px;
+    color: #1a1a1a;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+}
+
+/* Suggeriments en blau */
+.ia-suggestions-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-left: 42px; /* Alineat amb el final de l'avatar */
+}
+
+.btn-suggestion {
+    background-color: #9dbfff; /* Blau cel de la imatge */
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 25px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-suggestion:active {
+    opacity: 0.8;
+    transform: scale(0.98);
+}
+
+/* Input inferior */
+.chat-input-fixed {
+    position: absolute;
+    bottom: 95px;
+    left: 20px;
+    right: 20px;
+}
+
+.input-wrapper-styled {
+    display: flex;
+    align-items: center;
+    background: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    padding: 5px 10px 5px 15px;
+}
+
+.input-field {
+    border: none;
+    background: transparent;
+    flex-grow: 1;
+    padding: 10px;
+    outline: none;
+    font-size: 14px;
+    color: #666;
+}
+
+.btn-send-blue {
+    background-color: #2b5dff;
+    color: white;
+    border: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* --- Detalls del Xat d'IA (Captura 10) --- */
+
+.user-message-row {
+    display: flex;
+    justify-content: flex-end; /* Alineat a la dreta */
+    margin-bottom: 25px;
+}
+
+.user-bubble {
+    background-color: #2b5dff; /* Blau intens de l'usuari */
+    color: white;
+    padding: 12px 20px;
+    border-radius: 20px 20px 5px 20px;
+    font-size: 14px;
+    max-width: 75%;
+}
+
+.ia-bubble-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /* Espai petit entre bombolles consecutives */
+}
+
+.ia-bubble.concert-detail {
+    background-color: #f2f2f2; /* Gris molt claret per destacar detalls */
+    border: none;
+}
+
+.suggested-followup {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.suggested-followup p {
+    font-size: 12px;
+    color: #888;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.btn-suggestion-blue {
+    background-color: #2b5dff;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Configuració de base per evitar scroll global */
+.chat-page-body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden; /* Prohibeix que tota la web es mogui */
+    background-color: #fcfcfc;
+}
+
+/* Contenidor que organitza els 3 blocs (Header, Main, Footer) */
+.chat-layout {
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Exactament l'alçada de la pantalla */
+    max-width: 500px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* El Main és l'únic que té permís per fer scroll */
+.chat-scroll-viewport {
+    flex: 1; /* Ocupa tot l'espai que sobra al mig */
+    overflow-y: auto; /* Activa el scroll vertical */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    scrollbar-width: none; /* Amaga scroll en Firefox */
+}
+
+.chat-scroll-viewport::-webkit-scrollbar {
+    display: none; /* Amaga scroll en Chrome/Safari */
+}
+
+/* Espaiador final perquè el missatge no quedi "clavat" a l'input */
+.chat-bottom-spacer {
+    height: 40px; 
+    flex-shrink: 0;
+}
+
+/* El footer es queda sempre a sota */
+.chat-footer-fixed {
+    flex-shrink: 0; /* No permet que el footer es faci petit */
+    background: white;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.03);
+}
+
+.chat-input-container {
+    padding: 12px 20px;
+    background: white;
+}
+
+.input-inner-box {
+    display: flex;
+    align-items: center;
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    padding: 5px 15px;
+}
+
+.input-field {
+    border: none;
+    background: transparent;
+    flex: 1;
+    padding: 10px;
+    outline: none;
+    font-size: 14px;
+}
+
+/* Estils de les bombolles segons captures */
+.user-message-row { display: flex; justify-content: flex-end; }
+.user-bubble { 
+    background-color: #2b5dff; 
+    color: white; 
+    padding: 12px 18px; 
+    border-radius: 18px 18px 2px 18px; 
+    max-width: 80%;
+    font-size: 14px;
+}
+
+.ia-message-row { display: flex; gap: 10px; align-items: flex-start; }
+.ia-avatar-circle { width: 32px; height: 32px; background: #b38884; border-radius: 50%; flex-shrink: 0; }
+.ia-bubble { 
+    background: white; 
+    border: 1px solid #e0e0e0; 
+    padding: 12px 18px; 
+    border-radius: 2px 18px 18px 18px; 
+    max-width: 80%;
+    font-size: 14px;
+    color: #333;
+}
+.ia-bubble.concert-detail { background: #f2f2f2; border: none; }
+/* Estils per a la llista d'esdeveniments de la Captura 32 */
+.ia-list-container {
+    padding-left: 42px; /* Alineat per sota de la primera bombolla */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.ia-subtitle-text {
+    font-size: 12px;
+    color: #888;
+    font-style: italic;
+    margin: 0 0 5px 0;
+}
+
+.event-card {
+    background: white !important; /* Forcem blanc com a la foto */
+    border: 1px solid #e0e0e0 !important;
+    padding: 15px !important;
+    border-radius: 18px !important;
+    font-size: 14px;
+    line-height: 1.5;
+    width: 100%;
+}
+
+.last-card-fix {
+    margin-left: -42px; /* Compensem el padding per posar l'avatar */
+    margin-top: 5px;
+}
+
+/* Botons blaus clars (Veure agenda / Buscar activitats) */
+.ia-suggestions-horizontal {
+    display: flex;
+    gap: 10px;
+    padding-left: 42px;
+    margin-top: 15px;
+}
+
+.btn-suggestion-blue-light {
+    background-color: #d1e3ff; /* Blau clar de la captura */
+    color: #2b5dff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    flex: 1;
+}
+.follow-up-text {
+    font-size: 13px;
+    color: #666;
+    font-style: italic;
+    text-align: center;
+    margin-top: 20px;
+    width: 100%;
+}
+
+/* Ajust per a les negretes dels títols d'esport */
+.event-card strong {
+    color: #000;
+}
+/* Estils específics per a Configuració */
+.header-config {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: white;
+}
+
+.profile-section {
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.avatar-large {
+    width: 80px;
+    height: 80px;
+    background-color: #ff4b4b; /* El vermell de la teva captura */
+    border-radius: 50%;
+    margin: 0 auto 10px;
+}
+
+.settings-list {
+    margin-top: 10px;
+    padding: 0 15px;
+}
+
+.settings-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 10px;
+    border-bottom: 1px solid #f5f5f5;
+    cursor: pointer;
+}
+
+.settings-item:active {
+    background-color: #f9f9f9;
+}
+
+.item-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.item-left i {
+    font-size: 1.2rem;
+    color: #0047FF; /* Blau corporatiu */
+    width: 25px;
+    text-align: center;
+}
+
+.item-left span {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+}
+
+.settings-item .fa-chevron-right {
+    color: #ccc;
+    font-size: 0.9rem;
+}
+
+.logout {
+    margin-top: 20px;
+}
+
+.logout span, .logout i {
+    color: #ff4b4b !important;
+}
+/* --- CSS FINAL MEJORADO --- */
+
+/* 1. Reset básico para evitar problemas de márgenes y tamaños */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenedor tipo móvil */
+.app-container {
+    width: 100%;
+    max-width: 430px;
+    /* Usamos dvh (Dynamic Viewport Height) para evitar problemas con la barra del navegador móvil */
+    height: 100vh; 
+    height: 100dvh; 
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    /* Opcional: una sombra ligera para que destaque si se abre en PC */
+    box-shadow: 0 0 20px rgba(0,0,0,0.05); 
+}
+
+/* Área de contenido */
+.scrollable-content {
+    flex: 1; /* Ocupa todo el espacio sobrante disponible */
+    overflow-y: auto; /* Hace scroll interno automáticamente */
+    padding-bottom: 20px; /* Ya no necesitas 100px porque el menú ya no flota por encima */
+}
+
+/* Header con check azul */
+.header-crear {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: #fff;
+    border-bottom: 1px solid #eee; /* Un borde sutil queda mejor */
+}
+
+.header-crear h2 { font-size: 18px; font-weight: 800; }
+.header-crear .fa-check { color: #0047FF; font-size: 20px; cursor: pointer; }
+
+/* Selector de imagen punteado */
+.image-selector {
+    margin: 20px;
+    height: 160px;
+    border: 2px dashed #99bcff;
+    border-radius: 20px;
+    background-color: #f4f8ff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #0047FF;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.image-selector:hover { background-color: #e6efff; } /* Feedback visual al tocar/pasar el ratón */
+.image-selector i { font-size: 40px; margin-bottom: 10px; color: #000; }
+
+/* Formulario */
+.create-form { padding: 0 20px; }
+.form-group { margin-bottom: 15px; }
+
+.form-group label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 8px;
+    font-size: 14px; /* Ligeramente más pequeño, ideal para móviles */
+}
+
+/* Inputs y Textareas */
+.form-group input, 
+.form-group textarea, 
+.input-simulated {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    background: #fff;
+    font-size: 15px;
+    outline: none; /* Quitamos el borde negro feo de los navegadores... */
+    transition: border-color 0.2s ease;
+}
+
+/* ... y ponemos uno elegante con tu color de marca cuando el usuario escribe */
+.form-group input:focus, 
+.form-group textarea:focus {
+    border-color: #0047FF;
+}
+
+.form-group textarea { height: 70px; resize: none; font-family: inherit; }
+
+/* Campos con flecha (Chevron) */
+.input-simulated {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #888;
+    cursor: pointer;
+}
+.input-simulated i { color: #bbb; font-size: 14px; }
+
+/* Botón Publicar Azul */
+.btn-publicar {
+    width: 100%;
+    padding: 15px;
+    background-color: #0047FF;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 17px;
+    font-weight: 600;
+    margin: 20px 0;
+    cursor: pointer;
+    transition: transform 0.1s ease, background-color 0.2s ease;
+}
+
+.btn-publicar:active { transform: scale(0.98); } /* Efecto de "hundirse" al hacer clic */
+.btn-publicar:hover { background-color: #003ce6; }
+
+/* Barra inferior (Bottom Nav) exacta a la imagen */
+.bottom-nav {
+    /* ADIÓS POSITION FIXED. Flexbox se encarga de dejarlo abajo. */
+    width: 100%;
+    height: 70px;
+    background: #f8f8f8;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 1px solid #e0e0e0;
+    flex-shrink: 0; /* Evita que el contenedor se aplaste si falta espacio */
+    
+    /* Soporte para el "Notch" inferior de los iPhone modernos */
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+.bottom-nav i {
+    font-size: 24px;
+    color: #333; /* Un negro ligeramente suavizado */
+    cursor: pointer;
+}
+
+/* El círculo azul del centro (+) */
+.nav-plus {
+    background-color: #0047FF;
+    width: 48px; /* Ligeramente más grande para más impacto */
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 71, 255, 0.3); /* Sombrita elegante */
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.nav-plus:hover { transform: scale(1.05); }
+.nav-plus i { color: white !important; font-size: 20px; }
+
+/* --- ESTILOS ESENCIALES PANTALLA PERFIL --- */
+
+:root {
+    --bg-app: #F4F4F4;
+    --blue-main: #1D4ED8;
+    --text-gray: #666666;
+}
+
+/* Contenedor principal para simular la App */
+.app-container {
+    width: 375px;
+    height: 812px;
+    background-color: var(--bg-app);
+    margin: 0 auto;
+    border-radius: 40px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+    border: 1px solid #ccc;
+}
+
+/* Header de la pantalla */
+.header-config {
+    text-align: center;
+    padding: 30px 20px 10px;
+}
+
+.header-config h2 {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* Sección de foto y nombre */
+.profile-section {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.avatar-large {
+    width: 100px;
+    height: 100px;
+    background: #ddd url('https://via.placeholder.com/100') center/cover;
+    border-radius: 50%;
+    margin: 0 auto 10px;
+    border: 3px solid white;
+}
+
+.profile-section h3 { margin: 5px 0 0; font-size: 20px; }
+.profile-section p { margin: 0; color: var(--text-gray); font-size: 14px; }
+
+/* Fila de Tarjetas (Stats) */
+.stats-row {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px 15px;
+    gap: 10px;
+}
+
+.stat-card {
+    background: white;
+    flex: 1;
+    padding: 15px 5px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.stat-card i { color: var(--blue-main); font-size: 20px; margin-bottom: 5px; }
+.stat-value { display: block; font-weight: bold; font-size: 16px; }
+.stat-label { display: block; font-size: 10px; color: var(--text-gray); text-transform: uppercase; margin-top: 3px; }
+
+/* Lista de Ajustes */
+.settings-list {
+    background: white;
+    margin: 0 20px 20px;
+    border-radius: 20px;
+    border: 1px solid #e2e8f0;
+    overflow: hidden;
+}
+
+.settings-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.settings-item:last-child { border-bottom: none; }
+
+.item-left { display: flex; align-items: center; gap: 12px; }
+.item-left i { color: var(--blue-main); width: 20px; text-align: center; }
+
+/* Botones finales */
+.btn-add-friend {
+    background: var(--blue-main);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    display: block;
+    margin: 0 auto 15px;
+    font-weight: bold;
+}
+
+.btn-logout-outline {
+    width: calc(100% - 40px);
+    margin: 0 20px 20px;
+    border: 2px solid #93c5fd;
+    background: transparent;
+    color: #ef4444;
+    padding: 12px;
+    border-radius: 12px;
+    font-weight: bold;
+}
+
+/* Nav Inferior */
+.bottom-nav {
+    margin-top: auto;
+    background: #D1D5DB;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 0 25px;
+}
+
+.nav-plus {
+    background: var(--blue-main);
+    color: white;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -35px;
+    border: 4px solid var(--bg-app);
+}
+
+/* Estilo específico para que la tarjeta parezca un botón */
+.clickable-card {
+    cursor: pointer;
+    transition: transform 0.1s ease, background-color 0.2s ease;
+    border: 1px solid transparent; /* Para evitar saltos al añadir borde en hover si quisieras */
+}
+
+/* Efecto al pasar el ratón (Desktop) */
+.clickable-card:hover {
+    background-color: #fcfcfc;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Efecto al pulsar (Feedback táctil para móvil) */
+.clickable-card:active {
+    transform: scale(0.95);
+    background-color: #f0f0f0;
+}
+
+/* Ajuste para el logo BV para que se vea como en la imagen */
+.stat-logo-bv {
+    color: #A13D8E;
+    font-weight: 900;
+    font-style: italic;
+    font-size: 22px;
+    margin-bottom: 4px;
+    display: block;
+}
+
+/* Asegurar que el texto pequeño no se rompa */
+.stat-value.small {
+    font-size: 11px;
+    line-height: 1.2;
+    font-weight: 700;
+    margin-bottom: 2px;
+}
+
+/* --- ESTILOS ESPECÍFICOS CONFIGURACIÓN --- */
+
+.rank-section {
+    text-align: center;
+    padding: 30px 20px;
+    background: white;
+}
+
+.rank-title {
+    font-weight: 800;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.rank-logo {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(45deg, #ff00ff, #ff0055); /* Degradado BV */
+    color: white;
+    font-size: 40px;
+    font-weight: 900;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 15px;
+    border-radius: 15px;
+    transform: rotate(-5deg); /* Toque de diseño */
+}
+
+.rank-section h3 {
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin: 5px 0;
+}
+
+.points {
+    color: #888;
+    font-size: 0.9rem;
+}
+
+.settings-list {
+    background: white;
+    margin: 10px 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 20px; /* Caja redondeada como en tu captura */
+    overflow: hidden;
+}
+
+.settings-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 20px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+}
+
+.settings-item:last-child { border-bottom: none; }
+
+.item-left { display: flex; align-items: center; gap: 15px; }
+.item-left i { color: #0047FF; font-size: 1.2rem; width: 25px; }
+.item-left span { font-weight: 500; font-size: 1rem; }
+.fa-chevron-right { color: #ccc; font-size: 0.8rem; }
+
+/* Logout en rojo */
+.logout span, .logout i { color: #ff3b30 !important; }
+
+/* Quita el estilo de enlace a la tarjeta de BV */
+.clickable-card {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.1s ease;
+}
+
+/* Efecto al presionar (Feedback táctil) */
+.clickable-card:active {
+    transform: scale(0.95);
+    background-color: #f0f0f0;
+}
+
+/* Estilo del logo BV */
+.stat-logo-bv {
+    color: #A13D8E;
+    font-weight: 900;
+    font-style: italic;
+    font-size: 22px;
+}
+
+/* Ajuste del texto de rango */
+.stat-value.small {
+    font-size: 11px;
+    font-weight: 700;
+    margin: 2px 0;
+}
+
+/* --- ESTILOS ESPECÍFICOS CONFIGURACIÓN --- */
+
+.rank-section {
+    text-align: center;
+    padding: 30px 20px;
+    background: white;
+}
+
+.rank-title {
+    font-weight: 800;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.rank-logo {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(45deg, #ff00ff, #ff0055); /* Degradado BV */
+    color: white;
+    font-size: 40px;
+    font-weight: 900;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 15px;
+    border-radius: 15px;
+    transform: rotate(-5deg); /* Toque de diseño */
+}
+
+.rank-section h3 {
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin: 5px 0;
+}
+
+.points {
+    color: #888;
+    font-size: 0.9rem;
+}
+
+.settings-list {
+    background: white;
+    margin: 10px 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 20px; /* Caja redondeada como en tu captura */
+    overflow: hidden;
+}
+
+.settings-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 20px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+}
+
+.settings-item:last-child { border-bottom: none; }
+
+.item-left { display: flex; align-items: center; gap: 15px; }
+.item-left i { color: #0047FF; font-size: 1.2rem; width: 25px; }
+.item-left span { font-weight: 500; font-size: 1rem; }
+.fa-chevron-right { color: #ccc; font-size: 0.8rem; }
+
+/* Logout en rojo */
+.logout span, .logout i { color: #ff3b30 !important; }
+
+/* --- CONFIGURACIÓ / RANGS STYLE --- */
+
+/* Estructura Base */
+.header-simple {
+    padding: 20px;
+    background: transparent;
+}
+
+.header-simple i {
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/* Sección del Rango */
+.rank-display {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.section-title {
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 25px;
+}
+
+/* El logo BV con degradado y rotación */
+.bv-logo-card {
+    width: 110px;
+    height: 110px;
+    background: linear-gradient(135deg, #cc33ff 0%, #ff2d55 100%);
+    border-radius: 25px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(-6deg);
+    box-shadow: 0 10px 25px rgba(255, 45, 85, 0.3);
+}
+
+.bv-text {
+    color: white;
+    font-size: 55px;
+    font-weight: 900;
+    letter-spacing: -2px;
+}
+
+.rank-title {
+    font-size: 26px;
+    font-weight: 800;
+    margin-top: 30px;
+    margin-bottom: 5px;
+}
+
+.points-subtitle {
+    color: #8e8e93;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.divider {
+    width: 60%;
+    height: 1px;
+    background-color: #e5e5e5;
+    margin: 20px auto;
+}
+
+/* Tarjeta Menú Blanca (Estilo iOS/App) */
+.menu-card {
+    background: white;
+    margin: 20px 25px;
+    border: 1px solid #e2e8f0; /* Borde muy fino */
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 20px;
+    border-bottom: 1px solid #f1f5f9;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.menu-item:last-child {
+    border-bottom: none;
+}
+
+.menu-item:active {
+    background-color: #f8faff;
+}
+
+.menu-item span {
+    font-size: 17px;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+.menu-item i {
+    color: #c7c7cc;
+    font-size: 15px;
+}
+
+/* Barra inferior estilo Captura */
+.bottom-nav {
+    background-color: #e5e5e5; /* Gris claro sólido */
+    border-top: 1px solid #d1d1d1;
+}
+
+.bottom-nav i {
+    color: #000000 !important; /* Iconos negros como la imagen */
+}
+
+.nav-plus {
+    background-color: #0047FF; /* Botón central azul */
+    border-radius: 50%;
+}
+
+/* --- ESTILOS CLASSIFICACIÓ --- */
+
+.header-ranking {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background: white;
+}
+
+.btn-back-blue {
+    background-color: #0047FF;
+    color: white;
+    width: 35px;
+    height: 35px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 60px;
+    cursor: pointer;
+}
+
+.header-ranking h2 {
+    font-size: 20px;
+    font-weight: 800;
+}
+
+/* Selector Amics/Global */
+.toggle-container {
+    display: flex;
+    background: white;
+    border: 1px solid #0047FF;
+    border-radius: 12px;
+    margin: 10px 20px 25px;
+    overflow: hidden;
+}
+
+.toggle-btn {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    font-style: italic;
+    color: #0047FF;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.toggle-btn.active {
+    background-color: #0047FF;
+    color: white;
+}
+
+/* Lista de Ranking */
+.ranking-list {
+    background: #f0f0f0;
+    margin-bottom: 30px;
+}
+
+.ranking-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    border-bottom: 1px solid #ddd;
+    font-style: italic;
+    font-size: 16px;
+}
+
+/* Colores de las posiciones */
+.ranking-item.top1 {
+    background-color: #0047FF;
+    color: white;
+    border-bottom: none;
+}
+
+.user-highlight {
+    background-color: #e0e0e0;
+}
+
+/* Mini iconos BV de colores */
+.bv-icon {
+    font-weight: 900;
+    font-size: 12px;
+    margin-left: 5px;
+    font-style: normal;
+}
+.pink { color: #ff00ff; }
+.green { color: #00ff00; }
+.yellow { color: #ffcc00; }
+.silver { color: #aaa; }
+.bronze { color: #cd7f32; }
+
+.points {
+    font-weight: 400;
+}
+
+/* Botón Añadir Amigo */
+.add-friend-container {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.btn-add-friend {
+    background-color: #0047FF;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 15px;
+    font-size: 14px;
+    font-style: italic;
+    cursor: pointer;
+}
+
+/* Estilo para la fila azul en el ranking Global */
+.ranking-item.top-blue {
+    background-color: #0047FF;
+    color: white;
+}
+
+.ranking-item.top-blue .bv-icon {
+    color: white;
+}
+
+/* Scroll suave para la lista larga */
+.scrollable-content {
+    scrollbar-width: none; /* Oculta scroll en Firefox */
+}
+.scrollable-content::-webkit-scrollbar {
+    display: none; /* Oculta scroll en Chrome/Safari */
+}
+
+/* El botón de añadir amigo solo debe salir en la pestaña de Amics */
+.add-friend-container {
+    padding-bottom: 30px;
+}
+
+/* --- ESTILS AFEGEIX AMIC --- */
+
+.header-amic {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Cercador */
+.search-container {
+    padding: 0 20px 20px;
+}
+
+.search-input {
+    width: 100%;
+    padding: 12px 20px;
+    border: 1px solid #0047FF;
+    border-radius: 25px;
+    font-size: 15px;
+    color: #0047FF;
+    outline: none;
+}
+
+.search-input::placeholder {
+    color: #0047FF;
+    opacity: 0.7;
+}
+
+/* Suggerències */
+.suggestions-section {
+    padding: 0 20px;
+}
+
+.suggestions-section h3 {
+    font-size: 18px;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+/* Targeta d'amic */
+.friend-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #0047FF;
+    border-radius: 15px;
+    padding: 12px 15px;
+    margin-bottom: 12px;
+    background-color: white;
+}
+
+.friend-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.friend-img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: #ddd; /* Per si no hi ha foto */
+}
+
+.friend-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.friend-name {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.friend-mutual {
+    font-size: 11px;
+    color: #666;
+}
+
+/* Botó circular blau + */
+.btn-add-circle {
+    background-color: #0047FF;
+    color: white;
+    border: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn-add-circle:active {
+    transform: scale(0.9);
+}
+
+.placeholder-img-red {
+    width: 100px;
+    height: 100px;
+    background-color: #ff0000; /* Bloque rojo */
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+.placeholder-img-red.large {
+    width: 200px; /* Más ancho para el logo de Leyenda */
+    height: 120px;
+}
+
+.ranges-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.full-width {
+    grid-column: span 2;
+}
+/* --- PANTALLA SISTEMA DE PUNTUACIÓN --- */
+
+.points-list {
+    margin-top: 10px;
+}
+
+.points-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/* Color de fondo alterno similar a la captura */
+.points-item:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.points-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex: 1;
+}
+
+.points-left span {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    line-height: 1.2;
+}
+
+.icon-blue-soft {
+    color: #1D4ED8;
+    font-size: 18px;
+    width: 25px;
+    text-align: center;
+}
+
+.pts-value {
+    font-weight: bold;
+    color: #1D4ED8;
+    font-style: italic;
+    white-space: nowrap;
+    margin-left: 10px;
+}
+
+.pts-value.italic {
+    color: #1D4ED8;
+}
+
+/* Nota final */
+.points-footer-note {
+    padding: 25px 20px;
+}
+
+.points-footer-note p {
+    font-size: 12px;
+    color: #666;
+    font-style: italic;
+    line-height: 1.4;
+    text-align: left;
+}
+
+/* Ajuste para el header si no lo tenías */
+.header-ranking {
+    display: flex;
+    align-items: center;
+    padding: 40px 20px 20px;
+    gap: 15px;
+}
+
+.btn-back-blue {
+    background-color: #1D4ED8;
+    color: white;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.btn-add-circle {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #1D4ED8;
+    color: white;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Transición suave */
+}
+
+/* Efecto al pulsar */
+.btn-add-circle:active {
+    transform: scale(0.8);
+}
+
+/* Clase que se añade por JavaScript */
+.btn-add-circle.added {
+    background-color: #22c55e;
+    box-shadow: 0 0 10px rgba(34, 197, 94, 0.4);
+}
+
+.friend-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 12px 15px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.friend-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.friend-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: #ddd;
+}
+
+.friend-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.friend-name {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.friend-mutual {
+    font-size: 11px;
+    color: #888;
+}
+
+.scrollable-content {
+    flex: 1;
+    overflow-y: auto;
+    padding-bottom: 90px; /* Deja espacio para la barra */
+}

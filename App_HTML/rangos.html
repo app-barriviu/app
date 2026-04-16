@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BV App - Rangs i Punts</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app-container">
+    <div class="scrollable-content">
+        <header class="header-simple">
+            <i class="fas fa-arrow-left" onclick="location.href='index.html'"></i>
+        </header>
+
+        <section class="rank-display">
+            <h2 class="section-title">Rang Actual</h2>
+            
+            <div class="bv-logo-card">
+                <span class="bv-text">BV</span>
+            </div>
+            
+            <h1 class="rank-title">Llegenda del Baix</h1>
+            <p class="points-subtitle">4200 punts</p>
+            
+            <div class="divider"></div>
+        </section>
+
+        <div class="menu-card">
+            <div class="menu-item" onclick="location.href='clasificacion-amics.html'">
+                <span>Classificació</span>
+                <i class="fas fa-chevron-right"></i>
+            </div>
+            
+            <div class="menu-item" onclick="location.href='tipos-de-rango.html'">
+                <span>Rangs de Punts</span>
+                <i class="fas fa-chevron-right"></i>
+            </div>
+            
+            <div class="menu-item" onclick="location.href='sistema-puntos.html'">
+                <span>Sistema de puntuació</span>
+                <i class="fas fa-chevron-right"></i>
+            </div>
+        </div>
+    </div>
+
+    <nav class="bottom-nav">
+        <i class="fas fa-home" onclick="location.href='index.html'"></i>
+        <i class="fas fa-map-marker-alt" onclick="location.href='mapa.html'"></i>
+        <div class="nav-plus" onclick="location.href='organizador.html'">
+            <i class="fas fa-plus"></i>
+        </div>
+        <i class="fas fa-heart" onclick="location.href='seguint.html'"></i>
+        <i class="fas fa-user active-icon"></i>
+    </nav>
+</div>
+
+</body>
+</html>

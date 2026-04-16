@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BV App - Inicio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app-container">
+    <div class="scrollable-content">
+        <header>
+            <div class="logo">BV</div>
+            <div class="avatar" onclick="location.href='configuracio.html'"><div class="img-placeholder-red"></div></div>
+        </header>
+
+        <h1>Hola, Juaking</h1>
+        <p class="subtitle">Que vols fer avui?</p>
+
+        <div class="categories">
+            <div class="pill active" onclick="location.href='index.html'">Per a tu</div>
+            <div class="pill" onclick="location.href='concert.html'">Concerts</div>
+            <div class="pill" onclick="location.href='esports.html'">Esports</div>
+            <div class="pill" onclick="location.href='cultura.html'">Cultura</div>
+            <div class="pill" onclick="location.href='gastronomia.html'">Gastronomia</div>
+        </div>
+
+        <section>
+            <div class="section-header">
+                <h2>Propers esdeveniments</h2>
+                <span class="view-all" onclick="location.href='ia_concerts2.html'" style="cursor:pointer;">Veure tot ></span>
+            </div>
+            
+            <div class="main-event-card" onclick="location.href='concierto.html'" style="cursor:pointer;">
+                <div class="date-badge"><b>DIV</b><br>26</div>
+                <div class="event-info">
+                    <p>Concert:</p>
+                    <h3>The Tyets</h3>
+                </div>
+                <button class="btn-veure">Veure</button>
+            </div>
+        </section>
+
+        <section>
+            <h2>Descobreix al mapa</h2>
+            <div class="map-preview" onclick="location.href='mapa.html'">
+                <button class="btn-map"><i class="fas fa-paper-plane"></i> Obre el mapa</button>
+            </div>
+        </section>
+
+        <section>
+            <h2>Recomanat per a tu</h2>
+            <div class="recomanats-grid">
+                <div class="small-card" onclick="location.href='detall.html'"><span class="tag">MÚSICA</span><b>Nit de DJ's</b></div>
+                <div class="small-card" onclick="location.href='cultura.html'"><span class="tag">FESTA MAJOR</span><b>Correfoc</b></div>
+                <div class="small-card" onclick="location.href='detall-deportivo.html'"><span class="tag">ESPORTS</span><b>Ruta BTT</b></div>
+            </div>
+        </section>
+
+        <button class="btn-help" onclick="location.href='ia.html'">
+            No saps què fer avui?
+        </button>
+    </div>
+
+    <nav class="bottom-nav">
+        <i class="fas fa-home active-icon" onclick="location.href='index.html'"></i>
+        <i class="fas fa-map-marker-alt" onclick="location.href='mapa.html'"></i>
+        <div class="nav-plus" onclick="location.href='organizador.html'"><i class="fas fa-plus"></i></div>
+        <i class="fas fa-heart" onclick="location.href='seguint.html'"></i>
+        <i class="fas fa-user" onclick="location.href='configuracio.html'"></i>
+    </nav>
+    
+</div>
+
+</body>
+</html>

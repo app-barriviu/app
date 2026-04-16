@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BV App - Detall Torneig</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app-container">
+    <div class="scrollable-content no-padding">
+        <div class="event-header-img sports-bg">
+            <button class="btn-back-float" onclick="history.back()">
+                <i class="fas fa-arrow-left"></i>
+            </button>
+            <div class="event-overlay">
+                <span class="category-pill-white">Esports</span>
+                <h2>Torneig de Futbol</h2>
+            </div>
+        </div>
+
+        <div class="quick-info-bar">
+            <div class="info-item">
+                <i class="fas fa-calendar-day"></i>
+                <span>21/03</span>
+            </div>
+            <div class="info-item">
+                <i class="far fa-clock"></i>
+                <span>09:00h</span>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Camp Municipal</span>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-users"></i>
+                <span>16 Equipos</span>
+            </div>
+        </div>
+
+        <div class="event-body">
+            <section class="desc-section">
+                <h3>Descripció de l'activitat</h3>
+                <p><strong>Vine a suar la samarreta i a gaudir de l'esport en estat pur!</strong></p>
+                <p>Participa en el torneig de futbol 7 del poble, una jornada plena de competició sana, joc net i molta diversió. Tant si vens a jugar com si vens a animar des de la grada, t'hi esperem...</p>
+            </section>
+
+            <section class="desc-section">
+                <h3>Què trobaràs?</h3>
+                <ul class="sports-list">
+                    <li><strong>Fase de grups i eliminatòries:</strong> Emoció fins a l'últim minut.</li>
+                    <li><strong>Premis:</strong> Trofeus per als guanyadors i regals per a tots els participants.</li>
+                    <li><strong>Zona de restauració:</strong> Entrepans i begudes per recuperar forces.</li>
+                </ul>
+            </section>
+
+            <section class="asistents-section">
+                <h3>Asistents</h3>
+                <div class="asistents-row">
+                    <div class="asistents-avatars">
+                        <div class="mini-avatar red"></div>
+                        <div class="mini-avatar blue"></div>
+                        <div class="mini-avatar red"></div>
+                        <div class="mini-avatar blue"></div>
+                    </div>
+                    <span>+176 persones</span>
+                </div>
+            </section>
+
+            <button class="btn-apuntar">Apuntar-m'hi</button>
+        </div>
+    </div>
+
+    <nav class="bottom-nav">
+        <i class="fas fa-home" onclick="location.href='index.html'"></i>
+        <i class="fas fa-map-marker-alt" onclick="location.href='mapa.html'"></i>
+        <div class="nav-plus"><i class="fas fa-plus"></i></div>
+        <i class="fas fa-heart" onclick="location.href='seguint.html'"></i>
+        <i class="fas fa-user" onclick="location.href='perfil.html'"></i>
+    </nav>
+</div>
+
+</body>
+</html>

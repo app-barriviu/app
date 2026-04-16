@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BV App - Seguint</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app-container">
+    <div class="scrollable-content">
+        <header class="header-seguint">
+            <div>
+                <h1>esports</h1>
+                <p class="subtitle">Events dels teus preferits</p>
+            </div>
+            <button class="btn-back" onclick="location.href='index.html'">
+                <i class="fas fa-arrow-left"></i>
+            </button>
+        </header>
+
+        <div class="stories-container">
+            <div class="story-item">
+                <div class="story-circle"><div class="badge">1</div></div>
+                <span>Ajuntament...</span>
+            </div>
+            <div class="story-item">
+                <div class="story-circle"><div class="badge">4</div></div>
+                <span>Club Bàsquet...</span>
+            </div>
+            <div class="story-item">
+                <div class="story-circle"><div class="badge">3</div></div>
+                <span>Sala Salamandra</span>
+            </div>
+            <div class="story-item">
+                <div class="story-circle"><div class="badge">5</div></div>
+                <span>FC Santboià</span>
+            </div>
+        </div>
+
+        <div class="feed-container">
+            <div class="feed-card">
+                <div class="card-content">
+                    <span class="location-tag">Sala 21</span>
+                    <h3>Nit Acústica</h3>
+                    <p>Div 27 · 21:00 h</p>
+                </div>
+            </div>
+
+            <div class="feed-card">
+                <div class="card-content">
+                    <span class="location-tag">Cornellà de Llobregat</span>
+                    <h3>Torneig Almeda</h3>
+                    <p>Dl 15 · 08:00 h</p>
+                </div>
+            </div>
+
+            <div class="feed-card">
+                <div class="card-content">
+                    <span class="location-tag">Parc de la Muntanyeta</span>
+                    <h3>Cursa Popular</h3>
+                    <p>Dg 20 · 10:00 h</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="bottom-nav">
+        <i class="fas fa-home" onclick="location.href='index.html'"></i>
+        <i class="fas fa-map-marker-alt" onclick="location.href='mapa.html'"></i>
+        <div class="nav-plus"><i class="fas fa-plus"></i></div>
+        <i class="fas fa-heart active-icon"></i>
+        <i class="fas fa-user"></i>
+    </nav>
+</div>
+
+</body>
+</html>

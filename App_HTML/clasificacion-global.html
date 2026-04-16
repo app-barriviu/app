@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BV App - Classificació</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app-container">
+    <div class="scrollable-content">
+        <header class="header-ranking">
+            <div class="btn-back-blue" onclick="location.href='configuracio.html'">
+                <i class="fas fa-arrow-left"></i>
+            </div>
+            <h2>Classificació</h2>
+        </header>
+
+        <div class="toggle-container">
+            <div id="btn-amics" class="toggle-btn active" onclick="showTab('amics')">Amics</div>
+            <div id="btn-global" class="toggle-btn" onclick="showTab('global')">Global</div>
+        </div>
+
+        <div id="tab-amics" class="ranking-list">
+            <div class="ranking-item top1">
+                <span class="rank-pos">Top 1</span>
+                <span class="user-name">Júlia Pérez <span class="bv-icon pink">BV</span></span>
+                <span class="points">4200 pts</span>
+            </div>
+            <div class="ranking-item user-highlight">
+                <span class="rank-pos">Top 5</span>
+                <span class="user-name">Juakingg <span class="bv-icon bronze">BV</span></span>
+                <span class="points">111 pts</span>
+            </div>
+            <div class="add-friend-container">
+                <button class="btn-add-friend"><i class="fas fa-plus"></i> Afegir a un amic</button>
+            </div>
+        </div>
+
+        <div id="tab-global" class="ranking-list" style="display: none;">
+            <div class="ranking-item">
+                <span class="rank-pos">Top 1</span>
+                <span class="user-name">Juakinggg <span class="bv-icon pink">BV</span></span>
+                <span class="points">7777 pts</span>
+            </div>
+            <div class="ranking-item">
+                <span class="rank-pos">Top 2</span>
+                <span class="user-name">Juakinggg <span class="bv-icon pink">BV</span></span>
+                <span class="points">7777 pts</span>
+            </div>
+            <div class="ranking-item top-blue">
+                <span class="rank-pos">Top 3</span>
+                <span class="user-name">Júlia Pérez <span class="bv-icon pink">BV</span></span>
+                <span class="points">4200 pts</span>
+            </div>
+            <div class="ranking-item"><span class="rank-pos">Top 4</span><span class="user-name">Juakinggg <span class="bv-icon green">BV</span></span><span class="points">1555 pts</span></div>
+            <div class="ranking-item"><span class="rank-pos">Top 5</span><span class="user-name">Juakinggg <span class="bv-icon green">BV</span></span><span class="points">1555 pts</span></div>
+            <div class="ranking-item"><span class="rank-pos">Top 10</span><span class="user-name">Juakinggg <span class="bv-icon green">BV</span></span><span class="points">1555 pts</span></div>
+            <div class="ranking-item"><span class="rank-pos">Top 15</span><span class="user-name">Juakinggg <span class="bv-icon yellow">BV</span></span><span class="points">777 pts</span></div>
+            <div class="ranking-item"><span class="rank-pos">Top 20</span><span class="user-name">Juakinggg <span class="bv-icon yellow">BV</span></span><span class="points">777 pts</span></div>
+        </div>
+    </div>
+
+    <nav class="bottom-nav">
+        <i class="fas fa-home" onclick="location.href='index.html'"></i>
+        <i class="fas fa-map-marker-alt" onclick="location.href='mapa.html'"></i>
+        <div class="nav-plus" onclick="location.href='organizador.html'"><i class="fas fa-plus"></i></div>
+        <i class="fas fa-heart active-icon"></i>
+        <i class="fas fa-user" onclick="location.href='configuracio.html'"></i>
+    </nav>
+</div>
+
+<script>
+function showTab(tab) {
+    const amicsTab = document.getElementById('tab-amics');
+    const globalTab = document.getElementById('tab-global');
+    const btnAmics = document.getElementById('btn-amics');
+    const btnGlobal = document.getElementById('btn-global');
+
+    if (tab === 'amics') {
+        amicsTab.style.display = 'block';
+        globalTab.style.display = 'none';
+        btnAmics.classList.add('active');
+        btnGlobal.classList.remove('active');
+    } else {
+        amicsTab.style.display = 'none';
+        globalTab.style.display = 'block';
+        btnGlobal.classList.add('active');
+        btnAmics.classList.remove('active');
+    }
+}
+</script>
+
+</body>
+</html>

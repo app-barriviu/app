@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>BV App - Xat amb IA</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="chat-page-body">
+
+<div class="chat-layout">
+    <header class="header-chat-ia">
+        <button class="btn-back-simple" onclick="history.back()">
+            <i class="fas fa-arrow-left"></i>
+        </button>
+        <div class="chat-title-wrapper">
+            <span class="logo-small-blue">BV</span>
+            <h2 class="chat-title">Xat amb IA</h2>
+        </div>
+        <i class="fas fa-ellipsis-h menu-dots"></i>
+    </header>
+
+    <main class="chat-scroll-viewport">
+        <div class="ia-message-row">
+            <div class="ia-avatar-circle"></div>
+            <div class="ia-bubble">Hola! Sóc el teu assistent, com et puc ajudar?</div>
+        </div>
+
+        <div class="user-message-row">
+            <div class="user-bubble">Quins concerts hi ha aquest cap de setmana?</div>
+        </div>
+
+        <div class="ia-message-row">
+            <div class="ia-avatar-circle"></div>
+            <div class="ia-bubble-group">
+                <div class="ia-bubble">Aquest cap de setmana tenim dos concerts destacats:</div>
+                <div class="ia-bubble concert-detail"><strong>Divendres 26:</strong> The Tyets a les 20:00 a Malalts de Festa.</div>
+                <div class="ia-bubble concert-detail"><strong>Diumenge 29:</strong> BMK a les 21:00 al Zoco Salamandra.</div>
+            </div>
+        </div>
+
+        <div class="user-message-row">
+            <div class="user-bubble">On puc comprar les entrades?</div>
+        </div>
+
+        <div class="ia-message-row">
+            <div class="ia-avatar-circle"></div>
+            <div class="ia-bubble">
+                Pots comprar les entrades a través de Ticketmaster o en la web de la Sala Apolo i Razzmatazz.
+            </div>
+        </div>
+        
+        <div class="chat-bottom-spacer"></div>
+    </main>
+
+    <footer class="chat-footer-fixed">
+        <div class="chat-input-container">
+            <div class="input-inner-box">
+                <i class="fas fa-plus icon-plus"></i>
+                <input type="text" placeholder="Escriu la teva pregunta..." class="input-field">
+                <button class="btn-send-blue">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+
+        <nav class="bottom-nav">
+            <i class="fas fa-home" onclick="location.href='index.html'"></i>
+            <i class="fas fa-map-marker-alt" onclick="location.href='mapa.html'"></i>
+            <div class="nav-plus"><i class="fas fa-plus"></i></div>
+            <i class="fas fa-heart" onclick="location.href='seguint.html'"></i>
+            <i class="fas fa-user" onclick="location.href='perfil.html'"></i>
+        </nav>
+    </footer>
+</div>
+
+</body>
+</html>
