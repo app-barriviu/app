@@ -1,0 +1,15 @@
+<svg id="Componente_2_1" data-name="Componente 2 – 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="86.268" height="23.768" viewBox="0 0 86.268 23.768">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectángulo_26" data-name="Rectángulo 26" width="12.115" height="12.115" fill="#fff"/>
+    </clipPath>
+  </defs>
+  <path id="Trazado_10" data-name="Trazado 10" d="M5.282,0h75.7a5.282,5.282,0,0,1,5.282,5.282v13.2a5.282,5.282,0,0,1-5.282,5.282H5.282A5.282,5.282,0,0,1,0,18.486V5.282A5.282,5.282,0,0,1,5.282,0Z" fill="#0037ff"/>
+  <g id="Grupo_9" data-name="Grupo 9" transform="translate(7 4.287)">
+    <g id="Grupo_8" data-name="Grupo 8" transform="translate(-1.077 1.923)" clip-path="url(#clip-path)">
+      <path id="Trazado_8" data-name="Trazado 8" d="M10.974.111A1.724,1.724,0,0,0,9.916.06L1.294,2.37A1.746,1.746,0,0,0,.98,5.626L4.089,7Z" transform="translate(0 0)" fill="#fff"/>
+      <path id="Trazado_9" data-name="Trazado 9" d="M12.714,11.482l2.31-8.621A1.724,1.724,0,0,0,14.973,1.8L8.088,8.687l1.37,3.11a1.746,1.746,0,0,0,3.256-.315" transform="translate(-2.969 -0.662)" fill="#fff"/>
+    </g>
+  </g>
+  <text id="Obre_el_mapa" data-name="Obre el mapa" transform="translate(23.268 15.768)" fill="#fff" font-size="10" font-family="NHaasGroteskDSPro-55Rg, Neue Haas Grotesk Display Pro"><tspan x="0" y="0">Obre el mapa</tspan></text>
+</svg>

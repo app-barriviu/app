@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="29" height="25" viewBox="0 0 29 25">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectángulo_15" data-name="Rectángulo 15" width="29" height="25" transform="translate(0.273 0)" fill="#0037ff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="Grupo_105" data-name="Grupo 105" transform="translate(0.294 -0.344)">
+    <g id="Enmascarar_grupo_3" data-name="Enmascarar grupo 3" transform="translate(-0.567 0.344)" clip-path="url(#clip-path)">
+      <g id="icono-perfil" transform="translate(1.135 0)">
+        <ellipse id="Elipse_21" data-name="Elipse 21" cx="6.401" cy="6.461" rx="6.401" ry="6.461" transform="translate(7.237 0)" fill="#0037ff"/>
+        <path id="Trazado_25" data-name="Trazado 25" d="M15.636,30.679C8.1,30.679,2,34.792,2,39.865a6.334,6.334,0,0,0,.186,1.512,61.984,61.984,0,0,0,13.451,1.38,62.061,62.061,0,0,0,13.451-1.38,6.334,6.334,0,0,0,.186-1.512c0-5.073-6.106-9.187-13.638-9.187Z" transform="translate(-1.998 -17.757)" fill="#0037ff"/>
+      </g>
+    </g>
+    <path id="Trazado_26" data-name="Trazado 26" d="M57.387,48.964" transform="translate(-28.968 -24.267)" fill="#0037ff" stroke="#707070" stroke-width="1"/>
+  </g>
+</svg>

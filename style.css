@@ -1,3 +1,40 @@
+/* --- BLOQUE ANULADOR TOTAL (FULL SCREEN) --- */
+html, body {
+    height: 100% !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    background-color: #f2f2f2 !important; /* El gris de tu fondo */
+}
+
+/* Fuerza al contenedor a ignorar anchos máximos previos */
+.app-container {
+    width: 100vw !important;
+    height: 100vh !important;
+    max-width: none !important; 
+    max-height: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    border-radius: 0 !important; /* Elimina el redondeado exterior */
+    box-shadow: none !important;
+    position: fixed !important; /* Lo ancla al viewport total */
+    top: 0 !important;
+    left: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+/* Asegura que el contenido scrolleable use todo el ancho */
+.scrollable-content {
+    width: 100% !important;
+    max-width: none !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+}
+/* --- FIN DEL BLOQUE ANULADOR --- */
+
 :root {
     --primary-blue: #0047ff;
     --bg-gray: #f2f2f2;

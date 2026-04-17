@@ -1,0 +1,10 @@
+<svg id="Componente_33_1" data-name="Componente 33 – 1" xmlns="http://www.w3.org/2000/svg" width="37" height="37" viewBox="0 0 37 37">
+  <g id="Grupo_211" data-name="Grupo 211" transform="translate(0.482)">
+    <g id="Grupo_21" data-name="Grupo 21">
+      <rect id="Rectángulo_27" data-name="Rectángulo 27" width="37" height="37" rx="18.5" transform="translate(-0.482)" fill="#0037ff"/>
+    </g>
+  </g>
+  <line id="Línea_78" data-name="Línea 78" y2="16" transform="translate(18 10)" fill="none" stroke="#fff" stroke-width="1"/>
+  <line id="Línea_77" data-name="Línea 77" x2="16" transform="translate(10 18)" fill="none" stroke="#fff" stroke-width="1"/>
+  <path id="Trazado_38" data-name="Trazado 38" d="M529.109,2322.868l4.261,4.4,9.834-9.834" transform="translate(-517.204 -2304.431)" fill="none" stroke="rgba(0,55,255,0)" stroke-linejoin="round" stroke-width="2"/>
+</svg>
