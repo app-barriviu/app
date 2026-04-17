@@ -87,10 +87,17 @@ header { display: flex; justify-content: space-between; align-items: center; mar
 
 /* Cards con fondo rojo */
 .main-event-card {
-    width: 100%; height: 200px; border-radius: 25px;
+    width: 100%; 
+    height: 240px; 
+    border-radius: 25px;
     background: linear-gradient(rgba(230,57,70,0.4), rgba(230,57,70,0.9)), url('https://via.placeholder.com/400x200');
-    background-color: var(--img-red); background-size: cover;
-    position: relative; padding: 20px; color: white; margin-bottom: 30px;
+    background-image: url(img/thethyetsgran.jpg);
+    background-size: cover;
+    position: relative; 
+    padding: 20px; 
+    color: white; 
+    margin-bottom: 30px;
+    margin-top: 15px;
 }
 
 .date-badge { background: white; color: black; width: 45px; padding: 8px; border-radius: 12px; text-align: center; font-size: 12px; }
@@ -104,8 +111,15 @@ header { display: flex; justify-content: space-between; align-items: center; mar
 
 /* Seccion Mapa Inicio */
 .map-preview {
-    width: 100%; height: 110px; background: white; border-radius: 20px;
-    border: 1px solid #ddd; margin-bottom: 30px; position: relative; cursor: pointer;
+    width: 100%; 
+    height: 110px; 
+    background: white; 
+    border-radius: 20px;
+    border: 1px solid #ddd; 
+    margin-bottom: 30px; 
+    position: relative; 
+    cursor: pointer;
+    margin-top: 15px;
 }
 .btn-map { position: absolute; bottom: 10px; right: 10px; background: var(--primary-blue); color: white; border: none; padding: 8px 15px; border-radius: 12px; font-size: 12px; cursor: pointer; }
 
@@ -124,14 +138,14 @@ header { display: flex; justify-content: space-between; align-items: center; mar
 .dist { color: var(--primary-blue); font-weight: bold; font-size: 12px; }
 
 /* Navegación Fija */
-.bottom-nav {
+. {
     position: absolute; bottom: 0; left: 0; width: 100%; height: 75px;
     background: var(--nav-gray); display: flex; justify-content: space-around;
     align-items: center; z-index: 10; border-top: 1px solid #ccc;
 }
 .bottom-nav i { font-size: 22px; color: #333; opacity: 0.5; cursor: pointer; }
 .bottom-nav i.active-icon { opacity: 1; color: black; }
-.nav-plus { background: var(--primary-blue); width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white !important; margin-top: -15px; }
+.nav-plus { bottom-navackground: var(--primary-blue); width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white !important; margin-top: -15px; }
 
 .btn-help { width: 100%; background: var(--primary-blue); color: white; border: none; padding: 18px; border-radius: 30px; font-weight: bold; margin-top: 20px; cursor: pointer; }
 
@@ -1182,28 +1196,85 @@ header { display: flex; justify-content: space-between; align-items: center; mar
     padding-bottom: env(safe-area-inset-bottom, 0px);
 }
 
-.bottom-nav i {
-    font-size: 24px;
-    color: #333; /* Un negro ligeramente suavizado */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 75px;
+    background-color: var(--nav-gray);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1000;
+    border-top: 1px solid #ccc;
+    padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* BARRA DE NAVEGACIÓN */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70px; /* Altura fija para la barra */
+    background-color: #e0e0e0; /* var(--nav-gray) */
+    display: flex;
+    justify-content: space-around; /* Reparte el espacio */
+    align-items: center;
+    z-index: 1000;
+    border-top: 1px solid #ccc;
+    padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* Todos los elementos ocupan el 20% del ancho */
+.bottom-nav i, 
+.nav-plus-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
 }
 
-/* El círculo azul del centro (+) */
+.bottom-nav i {
+    font-size: 24px;
+    color: #333;
+    opacity: 0.4;
+}
+
+.bottom-nav i.active-icon {
+    opacity: 1;
+    color: black;
+}
+
+/* EL BOTÓN AZUL (CORREGIDO) */
+.nav-plus-wrapper {
+    position: relative; /* Contenedor de referencia */
+    height: 100%;
+}
+
 .nav-plus {
-    background-color: #0047FF;
-    width: 48px; /* Ligeramente más grande para más impacto */
-    height: 48px;
+    position: absolute;
+    bottom: 25px; /* Ajusta este valor para que suba o baje respecto al suelo */
+    background-color: #0047ff; /* var(--primary-blue) */
+    width: 55px;
+    height: 55px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 4px 10px rgba(0, 71, 255, 0.3); /* Sombrita elegante */
-    cursor: pointer;
-    transition: transform 0.2s ease;
+    box-shadow: 0 4px 15px rgba(0, 71, 255, 0.4);
+    border: 5px solid #f2f2f2; /* El color del fondo de tu App */
+    z-index: 1001;
 }
 
-.nav-plus:hover { transform: scale(1.05); }
-.nav-plus i { color: white !important; font-size: 20px; }
+.nav-plus i {
+    color: white !important;
+    opacity: 1 !important;
+    font-size: 20px !important;
+    flex: none !important; /* Evita que el i herede el flex:1 del padre */
+}
 
 /* --- ESTILOS ESENCIALES PANTALLA PERFIL --- */
 
