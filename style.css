@@ -46,11 +46,12 @@ html, body {
     box-sizing: border-box; 
     margin: 0; 
     padding: 0; 
-    font-family: 'Segoe UI', sans-serif; 
+    font-family: "neue-haas-grotesk-display", sans-serif;
+    font-weight: 400; /* Roman */
+    font-style: normal;
 }
 
 body {
-    background-color:;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -66,6 +67,11 @@ body {
 }
 
 /* Scroll solo para el contenido de la Home */
+
+.h1 {
+    font-weight: 800;
+}
+
 .scrollable-content {
     height: 100%;
     overflow-y: auto;
@@ -75,14 +81,48 @@ body {
 .scrollable-content::-webkit-scrollbar { display: none; };
 
 /* Header & Utils */
-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px; }
-.logo { color: var(--primary-blue); font-weight: 900; font-size: 26px; }
-.avatar { width: 45px; height: 45px; border-radius: 50%; background: var(--img-red); }
-.subtitle { color: #777; margin-bottom: 25px; }
+header { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    margin-bottom: 25px; 
+}
+
+.logo { 
+    color: var(--primary-blue); 
+    font-weight: 900; 
+    font-size: 26px; 
+}
+
+.avatar { 
+    width: 45px; 
+    height: 45px; 
+    border-radius: 50%; 
+    background: var(--img-red); 
+}
+
+.subtitle { 
+    color: #777; 
+    margin-bottom: 25px; 
+}
 
 /* Categorías */
-.categories { display: flex; gap: 10px; overflow-x: auto; margin-bottom: 30px; }
-.pill { background: #ddd; padding: 10px 18px; border-radius: 20px; font-size: 13px; white-space: nowrap; cursor: pointer; }
+.categories { 
+    display: flex; 
+    gap: 10px; 
+    overflow-x: auto; 
+    margin-bottom: 30px; 
+}
+
+.pill { 
+    background: #ddd; 
+    padding: 10px 18px; 
+    border-radius: 20px; 
+    font-size: 13px; 
+    white-space: nowrap; 
+    cursor: pointer; 
+}
+
 .pill.active { background: #ccc; }
 
 /* Cards con fondo rojo */
@@ -110,10 +150,22 @@ header { display: flex; justify-content: space-between; align-items: center; mar
 .tag { font-size: 9px; background: rgba(0,0,0,0.2); padding: 4px 8px; border-radius: 6px; width: fit-content; }
 
 /* Seccion Mapa Inicio */
+
+#map {
+    height: 500px;
+    width: 80%;
+    max-width: 800px;
+    border: 2px solid #333;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    margin-top: 20px;
+}
+
 .map-preview {
     width: 100%; 
     height: 110px; 
-    background: white; 
+    background-image: url(img/fotomapa.jpg);
+    background-size: cover;
     border-radius: 20px;
     border: 1px solid #ddd; 
     margin-bottom: 30px; 
@@ -137,17 +189,58 @@ header { display: flex; justify-content: space-between; align-items: center; mar
 .mini-img-red { width: 65px; height: 65px; border-radius: 15px; background: var(--img-red); }
 .dist { color: var(--primary-blue); font-weight: bold; font-size: 12px; }
 
-/* Navegación Fija */
-. {
-    position: absolute; bottom: 0; left: 0; width: 100%; height: 75px;
-    background: var(--nav-gray); display: flex; justify-content: space-around;
-    align-items: center; z-index: 10; border-top: 1px solid #ccc;
-}
-.bottom-nav i { font-size: 22px; color: #333; opacity: 0.5; cursor: pointer; }
-.bottom-nav i.active-icon { opacity: 1; color: black; }
-.nav-plus { bottom-navackground: var(--primary-blue); width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white !important; margin-top: -15px; }
+/* --- NAVEGACIÓN INFERIOR --- */
+        .bottom-nav {
+            position: absolute;
+            bottom: 15px;
+            left: 15px;
+            right: 15px;
+            height: 65px;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border-radius: 35px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            z-index: 2000;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
 
+        .nav-item { color: #666; font-size: 22px; cursor: pointer; }
+        .nav-item.active { color: #000; }
+
+        .nav-plus {
+            background: var(--primary-blue);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white !important;
+            margin-top: -5px;
+            box-shadow: 0 4px 10px rgba(29, 78, 216, 0.3);
+        }
 .btn-help { width: 100%; background: var(--primary-blue); color: white; border: none; padding: 18px; border-radius: 30px; font-weight: bold; margin-top: 20px; cursor: pointer; }
+
+/* Color por defecto para todos los iconos (Gris claro) */
+.nav-item {
+    color: #ccc; /* Gris claro */
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+/* Color para el icono que tiene la clase active */
+.nav-item.active {
+    color: #2d5bff; /* El color de tu marca (Azul, por ejemplo) */
+}
+
+/* Estilo para el botón del centro (opcional) */
+.nav-plus {
+    background-color: #2d5bff; /* Fondo del botón + */
+    color: white;
+    /* ... resto de tus estilos para el círculo ... */
+}
 
 /* Estilos específicos para la pantalla Seguint */
 .header-seguint {
@@ -561,37 +654,114 @@ header { display: flex; justify-content: space-between; align-items: center; mar
 }
 
 /* --- Estructura Global --- */
-.header-inline { display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px; }
-.title-bold { font-size: 24px; font-weight: 800; color: var(--text-dark); }
-.subtitle-thin { font-size: 14px; color: var(--text-gray); }
+
+.header-inline { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    margin-bottom: 25px; 
+}
+
+.title-bold { 
+    font-size: 24px; 
+    font-weight: 800; 
+    color: var(--text-dark); 
+}
+
+.subtitle-thin { 
+    font-size: 14px; 
+    color: var(--text-gray); 
+}
 
 /* --- Panel Organizador (Captura 7) --- */
-.organizer-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 30px; }
+.organizer-grid { 
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 15px; 
+    margin-bottom: 30px; 
+}
+
 .stat-box {
-    background: white; border: 1.5px solid var(--border-blue); border-radius: 20px;
-    padding: 20px; height: 145px; display: flex; flex-direction: column; justify-content: center;
+    background: white; 
+    border: 1.5px solid var(--border-blue); 
+    border-radius: 20px;
+    padding: 20px; 
+    height: 145px; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center;
     box-shadow: 0 4px 10px rgba(0, 71, 255, 0.03);
 }
-.stat-big-val { font-size: 32px; font-weight: 800; color: var(--text-dark); margin-bottom: 8px; }
-.stat-desc { font-size: 13px; font-weight: 600; color: var(--text-dark); }
+
+.stat-big-val { 
+    font-size: 32px; 
+    font-weight: 800; 
+    color: var(--text-dark); 
+    margin-bottom: 8px; 
+}
+
+.stat-desc { 
+    font-size: 13px; 
+    font-weight: 600; 
+    color: var(--text-dark); 
+}
 
 .activity-card-row {
-    background: white; border: 1.5px solid var(--border-blue); border-radius: 18px;
-    padding: 16px 20px; display: flex; justify-content: space-between; align-items: center;
-    margin-bottom: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+    background: white; 
+    border: 1.5px solid var(--border-blue); 
+    border-radius: 18px;
+    padding: 16px 20px; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    margin-bottom: 12px; 
+    box-shadow: 0 2px 8px rgba(0,0,0,0.02);
 }
-.activity-texts h4 { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
-.activity-texts p { font-size: 12px; color: var(--text-gray); }
 
-.badge-status { padding: 6px 16px; border-radius: 12px; font-size: 12px; font-weight: 700; min-width: 85px; text-align: center; }
-.badge-status.light-blue { background: var(--light-blue-bg); color: var(--primary-blue); }
-.badge-status.solid-blue { background: var(--primary-blue); color: white; }
+.activity-texts h4 { 
+    font-size: 15px; 
+    font-weight: 700; 
+    margin-bottom: 4px; 
+}
+
+.activity-texts p { 
+    font-size: 12px; 
+    color: var(--text-gray); 
+}
+
+.badge-status { 
+    padding: 6px 16px; 
+    border-radius: 12px; 
+    font-size: 12px; 
+    font-weight: 700; 
+    min-width: 85px; 
+    text-align: center; 
+}
+
+.badge-status.light-blue { 
+    background: var(--light-blue-bg); 
+    color: var(--primary-blue); 
+}
+
+.badge-status.solid-blue { 
+    background: var(--primary-blue); 
+    color: white; 
+}
 
 /* --- Missatges (Captura 8) --- */
+
 .styled-search-input {
-    width: 100%; padding: 14px 25px; border-radius: 30px; border: 1.5px solid var(--primary-blue);
-    background: white; font-size: 14px; color: var(--text-dark); margin-bottom: 25px; outline: none;
+    width: 100%; 
+    padding: 14px 25px; 
+    border-radius: 30px; 
+    border: 1.5px solid var(--primary-blue);
+    background: white; 
+    font-size: 14px; 
+    color: var(--text-dark); 
+    margin-bottom: 25px; 
+    outline: none;
 }
+
 .message-card {
     background: white; border: 1.5px solid var(--border-blue); border-radius: 18px;
     padding: 14px; display: flex; align-items: center; gap: 14px; margin-bottom: 12px;
@@ -1180,101 +1350,6 @@ header { display: flex; justify-content: space-between; align-items: center; mar
 .btn-publicar:active { transform: scale(0.98); } /* Efecto de "hundirse" al hacer clic */
 .btn-publicar:hover { background-color: #003ce6; }
 
-/* Barra inferior (Bottom Nav) exacta a la imagen */
-.bottom-nav {
-    /* ADIÓS POSITION FIXED. Flexbox se encarga de dejarlo abajo. */
-    width: 100%;
-    height: 70px;
-    background: #f8f8f8;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    border-top: 1px solid #e0e0e0;
-    flex-shrink: 0; /* Evita que el contenedor se aplaste si falta espacio */
-    
-    /* Soporte para el "Notch" inferior de los iPhone modernos */
-    padding-bottom: env(safe-area-inset-bottom, 0px);
-}
-
-.bottom-nav {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 75px;
-    background-color: var(--nav-gray);
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    z-index: 1000;
-    border-top: 1px solid #ccc;
-    padding-bottom: env(safe-area-inset-bottom);
-}
-
-/* BARRA DE NAVEGACIÓN */
-.bottom-nav {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 70px; /* Altura fija para la barra */
-    background-color: #e0e0e0; /* var(--nav-gray) */
-    display: flex;
-    justify-content: space-around; /* Reparte el espacio */
-    align-items: center;
-    z-index: 1000;
-    border-top: 1px solid #ccc;
-    padding-bottom: env(safe-area-inset-bottom);
-}
-
-/* Todos los elementos ocupan el 20% del ancho */
-.bottom-nav i, 
-.nav-plus-wrapper {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-}
-
-.bottom-nav i {
-    font-size: 24px;
-    color: #333;
-    opacity: 0.4;
-}
-
-.bottom-nav i.active-icon {
-    opacity: 1;
-    color: black;
-}
-
-/* EL BOTÓN AZUL (CORREGIDO) */
-.nav-plus-wrapper {
-    position: relative; /* Contenedor de referencia */
-    height: 100%;
-}
-
-.nav-plus {
-    position: absolute;
-    bottom: 25px; /* Ajusta este valor para que suba o baje respecto al suelo */
-    background-color: #0047ff; /* var(--primary-blue) */
-    width: 55px;
-    height: 55px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 4px 15px rgba(0, 71, 255, 0.4);
-    border: 5px solid #f2f2f2; /* El color del fondo de tu App */
-    z-index: 1001;
-}
-
-.nav-plus i {
-    color: white !important;
-    opacity: 1 !important;
-    font-size: 20px !important;
-    flex: none !important; /* Evita que el i herede el flex:1 del padre */
-}
 
 /* --- ESTILOS ESENCIALES PANTALLA PERFIL --- */
 
@@ -1393,28 +1468,6 @@ header { display: flex; justify-content: space-between; align-items: center; mar
     font-weight: bold;
 }
 
-/* Nav Inferior */
-.bottom-nav {
-    margin-top: auto;
-    background: #D1D5DB;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 15px 0 25px;
-}
-
-.nav-plus {
-    background: var(--blue-main);
-    color: white;
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: -35px;
-    border: 4px solid var(--bg-app);
-}
 
 /* Estilo específico para que la tarjeta parezca un botón */
 .clickable-card {
@@ -1724,20 +1777,6 @@ header { display: flex; justify-content: space-between; align-items: center; mar
     font-size: 15px;
 }
 
-/* Barra inferior estilo Captura */
-.bottom-nav {
-    background-color: #e5e5e5; /* Gris claro sólido */
-    border-top: 1px solid #d1d1d1;
-}
-
-.bottom-nav i {
-    color: #000000 !important; /* Iconos negros como la imagen */
-}
-
-.nav-plus {
-    background-color: #0047FF; /* Botón central azul */
-    border-radius: 50%;
-}
 
 /* --- ESTILOS CLASSIFICACIÓ --- */
 

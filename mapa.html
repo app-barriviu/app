@@ -2,53 +2,203 @@
 <html lang="ca">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BV App - Mapa</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>BV App - Mapa Interactiu</title>
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+
+    <style>
+        :root {
+            --primary-blue: #1D4ED8;
+            --bg-light: #f8f9fa;
+            --gray-light: #ccc; /* Color para los iconos inactivos */
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            overflow: hidden;
+        }
+
+        .app-container {
+            position: relative;
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            background-color: #e5e5e5;
+        }
+
+        /* --- EL MAPA --- */
+        #map {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 1;
+        }
+
+        /* --- PANEL DE EVENTOS --- */
+        .events-sheet {
+            position: absolute;
+            bottom: 95px; /* Subido un poco para que no tape el menú */
+            left: 15px;
+            right: 15px;
+            background: white;
+            z-index: 1000;
+            border-radius: 25px;
+            padding: 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+
+        .handle {
+            width: 40px;
+            height: 5px;
+            background: #e0e0e0;
+            border-radius: 10px;
+            margin: 0 auto 15px;
+        }
+
+        .events-sheet h3 {
+            margin: 0 0 5px 0;
+            font-size: 20px;
+            font-weight: 800;
+        }
+
+        .event-item {
+            display: flex;
+            align-items: center;
+            margin-top: 15px;
+        }
+
+        .event-color-box {
+            width: 55px;
+            height: 55px;
+            background: #e55a5a;
+            border-radius: 15px;
+            margin-right: 15px;
+        }
+
+        .event-info { flex-grow: 1; }
+        .event-name { font-weight: bold; font-size: 16px; display: block; }
+        .event-loc { font-size: 14px; color: #666; }
+        .event-dist { color: var(--primary-blue); font-weight: 600; font-size: 13px; margin-top: 2px; }
+
+        /* --- NAVEGACIÓN INFERIOR MEJORADA --- */
+        .bottom-nav {
+            position: absolute;
+            bottom: 15px;
+            left: 15px;
+            right: 15px;
+            height: 65px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 35px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            z-index: 2000;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        /* Estilo base para iconos: Gris claro */
+        .nav-item { 
+            color: var(--gray-light); 
+            font-size: 22px; 
+            cursor: pointer; 
+            transition: color 0.3s ease;
+        }
+
+        /* Estilo para el icono activo: Negro o azul */
+        .nav-item.active { 
+            color: #1D4ED8; 
+        }
+
+        .nav-plus {
+            background: var(--primary-blue);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white !important;
+            margin-top: -5px;
+            box-shadow: 0 4px 10px rgba(29, 78, 216, 0.3);
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
 
 <div class="app-container">
-    <div class="map-full-bg">
-        <div class="map-overlay-red"></div>
-    </div>
+    <div id="map"></div>
 
-    <div class="bottom-sheet">
-        <div class="drag-handle"></div>
-        <div class="sheet-header">
-            <h2>Esdeveniments a prop</h2>
-            <i class="fas fa-chevron-down"></i>
+    <div class="events-sheet">
+        <div class="handle"></div>
+        <h3>Esdeveniments a prop</h3>
+        
+        <div class="event-item">
+            <div class="event-color-box"></div>
+            <div class="event-info">
+                <span class="event-name">Concert: The Tyets</span>
+                <span class="event-loc"><i class="fas fa-map-marker-alt"></i> 22:00 • Sant Boi</span>
+                <div class="event-dist">1.2 km</div>
+            </div>
         </div>
 
-        <div class="event-list">
-            <div class="event-item">
-                <div class="mini-img-red"></div>
-                <div class="details">
-                    <h3>Concert: The Tyets</h3>
-                    <p>22:00 · <i class="fas fa-map-marker-alt"></i> Sant Boi</p>
-                    <span class="dist">1.2 km</span>
-                </div>
-            </div>
-            <div class="event-item">
-                <div class="mini-img-red"></div>
-                <div class="details">
-                    <h3>Nit de DJ's</h3>
-                    <p>23:00 · <i class="fas fa-map-marker-alt"></i> Cornellà</p>
-                    <span class="dist">2.5 km</span>
-                </div>
+        <div class="event-item">
+            <div class="event-color-box"></div>
+            <div class="event-info">
+                <span class="event-name">Nit de DJ's</span>
+                <span class="event-loc"><i class="fas fa-map-marker-alt"></i> 23:00 • Cornellà</span>
+                <div class="event-dist">2.5 km</div>
             </div>
         </div>
     </div>
 
     <nav class="bottom-nav">
-        <i class="fas fa-home" onclick="location.href='index.html'"></i>
-        <i class="fas fa-map-marker-alt active-icon"></i>
-        <div class="nav-plus"><i class="fas fa-plus"></i></div>
-        <i class="fas fa-heart"></i>
-        <i class="fas fa-user"></i>
-    </nav>
+    <i class="fas fa-home nav-item" onclick="location.href='index.html'"></i>
+
+    <i class="fas fa-map-marker-alt nav-item active"></i>
+
+    <div class="nav-plus" onclick="location.href='crear_activitat.html'">
+        <i class="fas fa-plus"></i>
+    </div>
+
+    <i class="fas fa-heart nav-item" onclick="location.href='seguint.html'"></i>
+
+    <i class="fas fa-user nav-item" onclick="location.href='configuracio.html'"></i>
+</nav>
 </div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script>
+    window.onload = function() {
+        var map = L.map('map', {
+            zoomControl: false,
+            center: [41.341, 2.035],
+            zoom: 14
+        });
+
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+            attribution: '©OpenStreetMap'
+        }).addTo(map);
+
+        L.marker([41.341, 2.035]).addTo(map)
+            .bindPopup("<b>Sant Boi</b><br>Esdeveniments aquí.");
+
+        setTimeout(function(){ 
+            map.invalidateSize(); 
+        }, 400);
+    };
+</script>
 
 </body>
 </html>
