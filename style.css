@@ -261,13 +261,33 @@ header {
     justify-content: center;
     cursor: pointer;
 }
+/* Estado inicial: Azul con letras blancas */
+.btn-apuntar {
+    width: 100%;
+    padding: 12px;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Transición suave */
+    
+    background-color: #adccea; 
+    color: white;
+    border: 2px solid #adccea;
+}
+
+/* Estado cuando haces clic: Fondo blanco y borde/letras azules */
+.btn-apuntar.declinado {
+    background-color: white;
+    color: #adccea;
+    border: 2px solid #adccea;
+}
 
 /* Stories */
 .stories-container {
     display: flex;
-    gap: 15px;
+    gap: 8px; /* Reducido de 15px a 8px */
     overflow-x: auto;
-    margin-bottom: 30px;
+    margin-bottom: 30px; 
     padding-bottom: 10px;
 }
 
