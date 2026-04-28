@@ -1,20 +1,28 @@
 <!DOCTYPE html>
-<html lang="Camp" manifest="cache.manifest">
+<html lang="ca" manifest="cache.manifest">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-    <title>BV App - Inicio</title>
+    <title>BV App - Inici</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://use.typekit.net/xmg6sxh.css">
     <link rel="stylesheet" href="style.css">
 
-    <meta name="theme-color" content="#FFA500">
-    <meta name="msapplication-nacbutton-color" content="#FFA500">
+    <!-- icones -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="icon-192.png" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="192x192" href="icon-192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="icon-512.png">
+
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0137ff">
+    <meta name="msapplication-nacbutton-color" content="#0137ff">
+
+    <!-- app (iOS) -->
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style">
-    <link rel="icon" sizes="192x192" href="images.png">
-    <link rel="icon" sizes="512x512" href="images.png">
-    <link rel="apple-touch-icon" href="images.png">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="BarriViu">
 </head>
 <body>
 
@@ -62,7 +70,7 @@
             <h2>Recomanat per a tu</h2>
             <div class="recomanats-grid">
                 <div class="small-card-dj" onclick="location.href='detall.html'"><span class="tag">MÚSICA</span><b>Nit de DJ's</b></div>
-                <div class="small-card-correfoc" onclick="location.href='cultura.html'"><span class="tag">FESTA MAJOR</span><b>Correfoc</b></div>
+                <div class="small-card-correfoc" onclick="location.href='correfoc.html'"><span class="tag">FESTA MAJOR</span><b>Correfoc</b></div>
                 <div class="small-card-btt" onclick="location.href='ruta_ciclista.html'"><span class="tag">ESPORTS</span><b>Ruta BTT</b></div>
             </div>
         </section>

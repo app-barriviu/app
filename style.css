@@ -285,6 +285,146 @@ header {
     margin-top: 15px;
 }
 
+.main-event-card-corre {
+    width: 100%; 
+    height: 240px; 
+    border-radius: 25px;
+    background: linear-gradient(rgba(230,57,70,0.4), rgba(230,57,70,0.9)), url('https://via.placeholder.com/400x200');
+    background-image: url(img/carrerapersonas.jpg);
+    background-size: cover;
+    position: relative; 
+    padding: 20px; 
+    color: white; 
+    margin-bottom: 30px;
+    margin-top: 15px;
+}
+
+.main-event-card-ciutat {
+    width: 100%; 
+    height: 240px; 
+    border-radius: 25px;
+    background: linear-gradient(rgba(230,57,70,0.4), rgba(230,57,70,0.9)), url('https://via.placeholder.com/400x200');
+    background-image: url(img/campofutbol.jpg);
+    background-size: cover;
+    position: relative; 
+    padding: 20px; 
+    color: white; 
+    margin-bottom: 30px;
+    margin-top: 15px;
+}
+
+.main-event-card-pedal {
+    width: 100%; 
+    height: 240px; 
+    border-radius: 25px;
+    background: linear-gradient(rgba(230,57,70,0.4), rgba(230,57,70,0.9)), url('https://via.placeholder.com/400x200');
+    background-image: url(img/rutabttgrande.jpg);
+    background-size: cover;
+    position: relative; 
+    padding: 20px; 
+    color: white; 
+    margin-bottom: 30px;
+    margin-top: 15px;
+}
+
+.main-event-card-padel {
+    width: 100%; 
+    height: 240px; 
+    border-radius: 25px;
+    background: linear-gradient(rgba(230,57,70,0.4), rgba(230,57,70,0.9)), url('https://via.placeholder.com/400x200');
+    background-image: url(img/padel.jpg);
+    background-size: cover;
+    position: relative; 
+    padding: 20px; 
+    color: white; 
+    margin-bottom: 30px;
+    margin-top: 15px;
+}
+
+.main-event-card-ritme {
+    width: 100%; 
+    height: 240px; 
+    border-radius: 25px;
+    background: linear-gradient(rgba(230,57,70,0.4), rgba(230,57,70,0.9)), url('https://via.placeholder.com/400x200');
+    background-image: url(img/zumba.jpg);
+    background-size: cover;
+    position: relative; 
+    padding: 20px; 
+    color: white; 
+    margin-bottom: 30px;
+    margin-top: 15px;
+}
+
+.main-event-card-rosalia {
+    width: 100%; 
+    height: 240px; 
+    border-radius: 25px;
+    background: linear-gradient(rgba(230,57,70,0.4), rgba(230,57,70,0.9)), url('https://via.placeholder.com/400x200');
+    background-image: url(img/rosalía.jpg);
+    background-size: cover;
+    position: relative; 
+    padding: 20px; 
+    color: white; 
+    margin-bottom: 30px;
+    margin-top: 15px;
+}
+
+.main-event-card-llum {
+    width: 100%; 
+    height: 240px; 
+    border-radius: 25px;
+    background: linear-gradient(rgba(230,57,70,0.4), rgba(230,57,70,0.9)), url('https://via.placeholder.com/400x200');
+    background-image: url(img/conciertopelolargo.jpg);
+    background-size: cover;
+    position: relative; 
+    padding: 20px; 
+    color: white; 
+    margin-bottom: 30px;
+    margin-top: 15px;
+}
+
+.main-event-card-joan {
+    width: 100%; 
+    height: 240px; 
+    border-radius: 25px;
+    background: linear-gradient(rgba(230,57,70,0.4), rgba(230,57,70,0.9)), url('https://via.placeholder.com/400x200');
+    background-image: url(img/cantantepeloblanco.jpg);
+    background-size: cover;
+    position: relative; 
+    padding: 20px; 
+    color: white; 
+    margin-bottom: 30px;
+    margin-top: 15px;
+}
+
+.main-event-card-tradicio {
+    width: 100%; 
+    height: 240px; 
+    border-radius: 25px;
+    background: linear-gradient(rgba(230,57,70,0.4), rgba(230,57,70,0.9)), url('https://via.placeholder.com/400x200');
+    background-image: url(img/concert.jpg);
+    background-size: cover;
+    position: relative; 
+    padding: 20px; 
+    color: white; 
+    margin-bottom: 30px;
+    margin-top: 15px;
+}
+
+.main-event-card-electronic {
+    width: 100%; 
+    height: 240px; 
+    border-radius: 25px;
+    background: linear-gradient(rgba(230,57,70,0.4), rgba(230,57,70,0.9)), url('https://via.placeholder.com/400x200');
+    background-image: url(img/concertalizz.jpg);
+    background-size: cover;
+    position: relative; 
+    padding: 20px; 
+    color: white; 
+    margin-bottom: 30px;
+    margin-top: 15px;
+}
+
 
 .date-badge { background: white; color: black; width: 45px; padding: 8px; border-radius: 12px; text-align: center; font-size: 12px; }
 
@@ -980,6 +1120,149 @@ header {
     height: 300px;
     background-color: var(--red); /* Tu fondo rojo */
     background-image: url(img/exposició.jpg);
+    background-size: cover;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.event-header-img-corre {
+    width: 100%;
+    height: 300px;
+    background-color: var(--red); /* Tu fondo rojo */
+    background-image: url(img/carrerapersonas.jpg);
+    background-size: cover;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.event-header-img-torneig {
+    width: 100%;
+    height: 300px;
+    background-color: var(--red); /* Tu fondo rojo */
+    background-image: url(img/campofutbol.jpg);
+    background-size: cover;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.event-header-img-ciclista {
+    width: 100%;
+    height: 300px;
+    background-color: var(--red); /* Tu fondo rojo */
+    background-image: url(img/rutabtt.jpg);
+    background-size: cover;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.event-header-img-padel {
+    width: 100%;
+    height: 300px;
+    background-color: var(--red); /* Tu fondo rojo */
+    background-image: url(img/padel.jpg);
+    background-size: cover;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.event-header-img-zumba {
+    width: 100%;
+    height: 300px;
+    background-color: var(--red); /* Tu fondo rojo */
+    background-image: url(img/zumba.jpg);
+    background-size: cover;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.event-header-img-rosalia {
+    width: 100%;
+    height: 300px;
+    background-color: var(--red); /* Tu fondo rojo */
+    background-image: url(img/rosalía.jpg);
+    background-size: cover;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.event-header-img-pol {
+    width: 100%;
+    height: 300px;
+    background-color: var(--red); /* Tu fondo rojo */
+    background-image: url(img/conciertopelolargo.jpg);
+    background-size: cover;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.event-header-img-joan {
+    width: 100%;
+    height: 300px;
+    background-color: var(--red); /* Tu fondo rojo */
+    background-image: url(img/cantantepeloblanco.jpg);
+    background-size: cover;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.event-header-img-guillem {
+    width: 100%;
+    height: 300px;
+    background-color: var(--red); /* Tu fondo rojo */
+    background-image: url(img/concert.jpg);
+    background-size: cover;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.event-header-img-alizz {
+    width: 100%;
+    height: 300px;
+    background-color: var(--red); /* Tu fondo rojo */
+    background-image: url(img/concertalizz.jpg);
+    background-size: cover;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.event-header-img-correfoc {
+    width: 100%;
+    height: 300px;
+    background-color: var(--red); /* Tu fondo rojo */
+    background-image: url(img/fuegosartificiales.jpg);
     background-size: cover;
     position: relative;
     display: flex;
