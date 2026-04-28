@@ -145,6 +145,147 @@ header {
     margin-top: 15px;
 }
 
+.main-event-card-gastro {
+    width: 100%; 
+    height: 240px; 
+    border-radius: 25px;
+    background: linear-gradient(rgba(230,57,70,0.4), rgba(230,57,70,0.9)), url('https://via.placeholder.com/400x200');
+    background-image: url(img/paradaflors.jpg);
+    background-size: cover;
+    position: relative; 
+    padding: 20px; 
+    color: white; 
+    margin-bottom: 30px;
+    margin-top: 15px;
+}
+
+.main-event-card-vins {
+    width: 100%; 
+    height: 240px; 
+    border-radius: 25px;
+    background: linear-gradient(rgba(230,57,70,0.4), rgba(230,57,70,0.9)), url('https://via.placeholder.com/400x200');
+    background-image: url(img/dospersonasnoche.jpg);
+    background-size: cover;
+    position: relative; 
+    padding: 20px; 
+    color: white; 
+    margin-bottom: 30px;
+    margin-top: 15px;
+}
+
+.main-event-card-sabor {
+    width: 100%; 
+    height: 240px; 
+    border-radius: 25px;
+    background: linear-gradient(rgba(230,57,70,0.4), rgba(230,57,70,0.9)), url('https://via.placeholder.com/400x200');
+    background-image: url(img/comida.jpg);
+    background-size: cover;
+    position: relative; 
+    padding: 20px; 
+    color: white; 
+    margin-bottom: 30px;
+    margin-top: 15px;
+}
+
+.main-event-card-cocina {
+    width: 100%; 
+    height: 240px; 
+    border-radius: 25px;
+    background: linear-gradient(rgba(230,57,70,0.4), rgba(230,57,70,0.9)), url('https://via.placeholder.com/400x200');
+    background-image: url(img/tallercocina.jpg);
+    background-size: cover;
+    position: relative; 
+    padding: 20px; 
+    color: white; 
+    margin-bottom: 30px;
+    margin-top: 15px;
+}
+
+.main-event-card-camp {
+    width: 100%; 
+    height: 240px; 
+    border-radius: 25px;
+    background: linear-gradient(rgba(230,57,70,0.4), rgba(230,57,70,0.9)), url('https://via.placeholder.com/400x200');
+    background-image: url(img/mercatfruita.jpg);
+    background-size: cover;
+    position: relative; 
+    padding: 20px; 
+    color: white; 
+    margin-bottom: 30px;
+    margin-top: 15px;
+}
+
+.main-event-card-escena {
+    width: 100%; 
+    height: 240px; 
+    border-radius: 25px;
+    background: linear-gradient(rgba(230,57,70,0.4), rgba(230,57,70,0.9)), url('https://via.placeholder.com/400x200');
+    background-image: url(img/obrateatre.jpg);
+    background-size: cover;
+    position: relative; 
+    padding: 20px; 
+    color: white; 
+    margin-bottom: 30px;
+    margin-top: 15px;
+}
+
+.main-event-card-classica {
+    width: 100%; 
+    height: 240px; 
+    border-radius: 25px;
+    background: linear-gradient(rgba(230,57,70,0.4), rgba(230,57,70,0.9)), url('https://via.placeholder.com/400x200');
+    background-image: url(img/auditori.jpg);
+    background-size: cover;
+    position: relative; 
+    padding: 20px; 
+    color: white; 
+    margin-bottom: 30px;
+    margin-top: 15px;
+}
+
+.main-event-card-fresca {
+    width: 100%; 
+    height: 240px; 
+    border-radius: 25px;
+    background: linear-gradient(rgba(230,57,70,0.4), rgba(230,57,70,0.9)), url('https://via.placeholder.com/400x200');
+    background-image: url(img/conciertopersonas.jpg);
+    background-size: cover;
+    position: relative; 
+    padding: 20px; 
+    color: white; 
+    margin-bottom: 30px;
+    margin-top: 15px;
+}
+
+.main-event-card-historica {
+    width: 100%; 
+    height: 240px; 
+    border-radius: 25px;
+    background: linear-gradient(rgba(230,57,70,0.4), rgba(230,57,70,0.9)), url('https://via.placeholder.com/400x200');
+    background-image: url(img/castellmuntanya.jpg);
+    background-size: cover;
+    position: relative; 
+    padding: 20px; 
+    color: white; 
+    margin-bottom: 30px;
+    margin-top: 15px;
+}
+
+.main-event-card-colors {
+    width: 100%; 
+    height: 240px; 
+    border-radius: 25px;
+    background: linear-gradient(rgba(230,57,70,0.4), rgba(230,57,70,0.9)), url('https://via.placeholder.com/400x200');
+    background-image: url(img/exposició.jpg);
+    background-size: cover;
+    position: relative; 
+    padding: 20px; 
+    color: white; 
+    margin-bottom: 30px;
+    margin-top: 15px;
+}
+
+
 .date-badge { background: white; color: black; width: 45px; padding: 8px; border-radius: 12px; text-align: center; font-size: 12px; }
 
 .recomanats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 15px; }
@@ -717,11 +858,11 @@ header {
     padding: 20px;
 }
 
-.event-header-img {
+.event-header-img-thetyets {
     width: 100%;
     height: 300px;
     background-color: var(--red); /* Tu fondo rojo */
-    background-image: url(img/concertverd.jpg);
+    background-image: url(img/thethyetsgran.jpg);
     background-size: cover;
     position: relative;
     display: flex;
@@ -730,11 +871,115 @@ header {
     padding: 20px;
 }
 
-.event-header-img {
+.event-header-img-gastro {
     width: 100%;
     height: 300px;
     background-color: var(--red); /* Tu fondo rojo */
-    background-image: url(img/concertverd.jpg);
+    background-image: url(img/paradaflors.jpg);
+    background-size: cover;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.event-header-img-vins {
+    width: 100%;
+    height: 300px;
+    background-color: var(--red); /* Tu fondo rojo */
+    background-image: url(img/dospersonasnoche.jpg);
+    background-size: cover;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.event-header-img-tapes {
+    width: 100%;
+    height: 300px;
+    background-color: var(--red); /* Tu fondo rojo */
+    background-image: url(img/comida.jpg);
+    background-size: cover;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.event-header-img-mercat {
+    width: 100%;
+    height: 300px;
+    background-color: var(--red); /* Tu fondo rojo */
+    background-image: url(img/mercatfruita.jpg);
+    background-size: cover;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.event-header-img-teatre {
+    width: 100%;
+    height: 300px;
+    background-color: var(--red); /* Tu fondo rojo */
+    background-image: url(img/obrateatre.jpg);
+    background-size: cover;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.event-header-img-classica {
+    width: 100%;
+    height: 300px;
+    background-color: var(--red); /* Tu fondo rojo */
+    background-image: url(img/auditori.jpg);
+    background-size: cover;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.event-header-img-fresca {
+    width: 100%;
+    height: 300px;
+    background-color: var(--red); /* Tu fondo rojo */
+    background-image: url(img/conciertopersonas.jpg);
+    background-size: cover;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.event-header-img-historica {
+    width: 100%;
+    height: 300px;
+    background-color: var(--red); /* Tu fondo rojo */
+    background-image: url(img/castellmuntanya.jpg);
+    background-size: cover;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.event-header-img-exposicio {
+    width: 100%;
+    height: 300px;
+    background-color: var(--red); /* Tu fondo rojo */
+    background-image: url(img/exposició.jpg);
     background-size: cover;
     position: relative;
     display: flex;
