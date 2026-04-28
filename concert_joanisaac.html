@@ -6,6 +6,37 @@
     <title>BV App - Detall</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilos para habilitar el scroll horizontal en la barra de info en móviles */
+        @media (max-width: 600px) {
+            .quick-info-bar {
+                display: flex;
+                overflow-x: auto; /* Habilita scroll horizontal */
+                white-space: nowrap; /* Evita que los items bajen a la siguiente línea */
+                padding: 15px 10px;
+                gap: 20px; /* Espacio entre elementos */
+                -webkit-overflow-scrolling: touch; /* Scroll suave en iOS */
+                scrollbar-width: none; /* Oculta barra en Firefox */
+            }
+
+            .quick-info-bar::-webkit-scrollbar {
+                display: none; /* Oculta barra en Chrome/Safari para estética app */
+            }
+
+            .info-item {
+                flex: 0 0 auto; /* Evita que los items se encojan */
+                display: flex;
+                align-items: center;
+                gap: 8px;
+            }
+        }
+
+        /* Ajuste extra para que el contenedor principal no se rompa */
+        .app-container {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+    </style>
 </head>
 <body>
 
@@ -37,6 +68,10 @@
             <div class="info-item">
                 <i class="far fa-user"></i>
                 <span>300</span>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-ticket-alt"></i>
+                <span>Gratuït</span>
             </div>
         </div>
 
@@ -75,18 +110,14 @@
     </div>
 
     <nav class="bottom-nav">
-    <i class="fas fa-home nav-item" onclick="location.href='index.html'"></i>
-
-    <i class="fas fa-map-marker-alt nav-item" onclick="location.href='mapa.html'"></i>
-
-    <div class="nav-plus" onclick="location.href='crear_activitat.html'">
-        <i class="fas fa-plus"></i>
-    </div>
-
-    <i class="fas fa-heart nav-item" onclick="location.href='seguint.html'"></i>
-
-    <i class="fas fa-user nav-item" onclick="location.href='configuracio.html'"></i>
-</nav>
+        <i class="fas fa-home nav-item" onclick="location.href='index.html'"></i>
+        <i class="fas fa-map-marker-alt nav-item" onclick="location.href='mapa.html'"></i>
+        <div class="nav-plus" onclick="location.href='crear_activitat.html'">
+            <i class="fas fa-plus"></i>
+        </div>
+        <i class="fas fa-heart nav-item" onclick="location.href='seguint.html'"></i>
+        <i class="fas fa-user nav-item" onclick="location.href='configuracio.html'"></i>
+    </nav>
 </div>
 
 </body>
