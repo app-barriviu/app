@@ -1,7 +1,7 @@
 /* --- BLOQUE ANULADOR TOTAL (FULL SCREEN) --- */
 html, body {
-    height: 100% !important;
-    width: 100% !important;
+    height: 100vh !important;
+    width: 100vw !important;
     margin: 0 !important;
     padding: 0 !important;
     overflow: hidden !important;
