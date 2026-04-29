@@ -3638,7 +3638,7 @@ header {
 
 /* Esto va al principio de tu CSS para resetear el comportamiento */
 html, body {
-    height: 100%;
+    height: 100vh;
     margin: 0;
     padding: 0;
     overflow: hidden; /* Evita el rebote de toda la página */
@@ -3662,7 +3662,6 @@ html, body {
     padding-bottom: 150px !important; 
     display: block; /* Asegura que se comporte como bloque para calcular la altura */
 }
-
 .create-form {
     display: flex;
     flex-direction: column;
