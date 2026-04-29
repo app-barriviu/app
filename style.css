@@ -3039,6 +3039,50 @@ header {
     border-radius: 15px;
     margin-bottom: 10px;
 }
+.placeholder-img-red-curios {
+    width: 100px;
+    height: 100px;
+    background-image: url(img/Curiós.svg);
+    background-size: cover;    
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+.placeholder-img-red-asistent {
+    width: 100px;
+    height: 100px;
+    background-image: url(img/Explorador.svg);
+    background-size: cover;    
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+.placeholder-img-red-conector {
+    width: 100px;
+    height: 100px;
+    background-image: url(img/Participant.svg);
+    background-size: cover;    
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+.placeholder-img-red-cuart {
+    width: 100px;
+    height: 100px;
+    background-image: url(img/Referent.svg);
+    background-size: cover;    
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+.placeholder-img-red-llegenda {
+    width: 100px;
+    height: 100px;
+    background-image: url(img/Lleyenda\ del\ baix\ \(1\).png);
+    background-size: cover;    
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
 
 .placeholder-img-red.large {
     width: 200px; /* Más ancho para el logo de Leyenda */
