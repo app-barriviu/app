@@ -3210,3 +3210,305 @@ header {
     overflow-y: auto;
     padding-bottom: 90px; /* Deja espacio para la barra */
 }
+
+/* --- AJUSTE DEL HEADER (RANGS DE PUNTS) --- */
+.header-ranking {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: transparent !important; /* Eliminamos el fondo blanco sobrante */
+    padding: 10px 0 !important;         /* Ajustamos para que no flote en un cuadro */
+    margin-bottom: 25px;
+}
+
+.header-ranking h2 {
+    margin: 0 !important;
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: bold;
+}
+
+/* El botón azul circular reutilizado */
+.btn-back-blue {
+    background-color: #2b44d2;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+/* --- GRID DE RANGOS --- */
+.ranges-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas */
+    gap: 15px;
+    padding-bottom: 100px; /* Espacio para no chocar con la nav inferior */
+}
+
+.range-item {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* Caso especial para "Llegenda del Baix" (ocupa todo el ancho) */
+.range-item.full-width {
+    grid-column: 1 / span 2;
+}
+
+/* Estilo para los placeholders (puedes cambiarlos por imágenes después) */
+.placeholder-img-red {
+    width: 60px;
+    height: 60px;
+    background-color: #ff4d4d; /* Rojo */
+    border-radius: 12px;
+    margin-bottom: 12px;
+}
+
+.placeholder-img-red.large {
+    width: 80px;
+    height: 80px;
+}
+
+.range-name {
+    font-weight: bold;
+    color: #333;
+    font-size: 1.1rem;
+    margin-bottom: 4px;
+}
+
+.range-desc {
+    color: #2b44d2;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+/* --- AJUSTE DEL HEADER (AFEGIR AMIC) --- */
+.header-amic {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: transparent !important;
+    padding: 10px 0 !important;
+    margin-bottom: 20px;
+}
+
+.header-amic h2 {
+    margin: 0 !important;
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Reutilizamos el botón circular azul */
+.btn-back-blue {
+    background-color: #2b44d2;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+/* --- BUSCADOR --- */
+.search-container {
+    margin-bottom: 25px;
+}
+
+.search-input {
+    width: 100%;
+    padding: 12px 20px;
+    border-radius: 25px;
+    border: 1px solid #ddd;
+    background-color: white;
+    font-size: 1rem;
+    outline: none;
+    box-sizing: border-box; /* Evita que el input se salga del borde */
+}
+
+/* --- SECCIÓN DE SUGERENCIAS --- */
+.suggestions-section h3 {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.friend-card {
+    background: white;
+    padding: 12px 15px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.friend-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.friend-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: #eee;
+}
+
+.friend-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.friend-name {
+    font-weight: bold;
+    color: #333;
+}
+
+.friend-mutual {
+    font-size: 0.8rem;
+    color: #888;
+}
+
+/* --- BOTÓN AÑADIR (Círculo pequeño) --- */
+.btn-add-circle {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: none;
+    background-color: #2b44d2; /* Tu azul corporativo */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* El estado "added" lo gestionas tú por JS, este estilo lo apoya */
+.btn-add-circle.added {
+    background-color: #22c55e !important; /* Verde */
+}
+
+/* Espacio final para que el último amigo no quede tapado por la nav */
+.suggestions-section {
+    padding-bottom: 100px;
+}
+
+/* --- AJUSTE EXCLUSIVO PARA EL HEADER --- */
+.header-ranking {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: transparent !important; /* Forzamos que sea transparente */
+    padding: 10px 0 !important;         /* Quitamos rellenos laterales */
+    margin-bottom: 20px;
+    width: 100%;                        /* Se asegura de no empujar nada fuera */
+}
+
+.header-ranking h2 {
+    margin: 0 !important;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+/* Estilo del botón circular azul */
+.btn-back-blue {
+    background-color: #2b44d2;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+    flex-shrink: 0; /* Evita que el círculo se deforme */
+}
+
+/* --- ESTILOS DE LOS ITEMS DEL RANKING --- */
+.ranking-item {
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.user-highlight {
+    border: 2px solid #2b44d2; 
+}
+
+.rank-pos {
+    font-weight: bold;
+    color: #888;
+    width: 50px;
+}
+
+.user-name {
+    flex: 1;
+    font-weight: 500;
+}
+
+/* Colores de las etiquetas BV */
+.bv-icon {
+    font-size: 0.7rem;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin-left: 5px;
+    color: white;
+}
+.pink { background: #ff69b4; }
+.green { background: #4caf50; }
+.yellow { background: #ffc107; }
+.silver { background: #bdc3c7; }
+.bronze { background: #cd7f32; }
+
+.points {
+    font-weight: bold;
+    color: #2b44d2;
+}
+
+/* Selector Amics / Global */
+.toggle-container {
+    display: flex;
+    background: #e0e0e0;
+    border-radius: 25px;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+.toggle-btn {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #666;
+}
+
+.toggle-btn.active {
+    background: white;
+    color: #2b44d2;
+}
