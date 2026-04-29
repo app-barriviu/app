@@ -3636,21 +3636,37 @@ header {
     justify-content: flex-start;
 }
 
-/* Contenedor principal que ocupa toda la pantalla */
+/* Esto va al principio de tu CSS para resetear el comportamiento */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Evita el rebote de toda la página */
+}
+
 .app-container {
     display: flex;
     flex-direction: column;
-    height: 100vh; /* Altura total de la ventana del móvil */
-    overflow: hidden; /* Evita que la pantalla entera rebote */
+    height: 100vh; /* Altura total real del móvil */
+    width: 100vw;
 }
 
-/* Área donde está el contenido (el header, las listas, los rangos...) */
 .scrollable-content {
-    flex: 1; /* Ocupa todo el espacio disponible arriba de la nav */
-    overflow-y: auto; /* Habilita el scroll vertical cuando el contenido supera la pantalla */
-    -webkit-overflow-scrolling: touch; /* Hace que el scroll sea suave en iPhone (iOS) */
-    padding: 20px; /* Margen para que el contenido no pegue a los bordes */
+    flex: 1; /* Ocupa todo el espacio hasta la nav */
+    overflow-y: scroll !important; /* FUERZA el scroll vertical */
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch; /* Suavidad en iPhone */
     
-    /* ¡MUY IMPORTANTE! */
-    padding-bottom: 100px; /* Espacio extra al final para que la barra nav no tape lo último */
+    /* EL ESPACIO MÁGICO */
+    /* Aumentamos el padding para que el botón "suba" por encima de la nav */
+    padding-bottom: 150px !important; 
+    display: block; /* Asegura que se comporte como bloque para calcular la altura */
+}
+
+.create-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* Esto garantiza que después del botón haya aire para scrollear */
+    margin-bottom: 50px; 
 }
