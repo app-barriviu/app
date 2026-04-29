@@ -3635,3 +3635,22 @@ header {
 .header-crear i.fa-arrow-left {
     justify-content: flex-start;
 }
+
+/* Contenedor principal que ocupa toda la pantalla */
+.app-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Altura total de la ventana del móvil */
+    overflow: hidden; /* Evita que la pantalla entera rebote */
+}
+
+/* Área donde está el contenido (el header, las listas, los rangos...) */
+.scrollable-content {
+    flex: 1; /* Ocupa todo el espacio disponible arriba de la nav */
+    overflow-y: auto; /* Habilita el scroll vertical cuando el contenido supera la pantalla */
+    -webkit-overflow-scrolling: touch; /* Hace que el scroll sea suave en iPhone (iOS) */
+    padding: 20px; /* Margen para que el contenido no pegue a los bordes */
+    
+    /* ¡MUY IMPORTANTE! */
+    padding-bottom: 100px; /* Espacio extra al final para que la barra nav no tape lo último */
+}
