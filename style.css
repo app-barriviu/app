@@ -1,11 +1,11 @@
 /* --- BLOQUE ANULADOR TOTAL (FULL SCREEN) --- */
 html, body {
-    height: 100vh !important;
-    width: 100vw !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    overflow: hidden !important;
-    background-color: #f2f2f2 !important; /* El gris de tu fondo */
+    height: 100vh ;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #f2f2f2; /* El gris de tu fondo */
 }
 
 /* Fuerza al contenedor a ignorar anchos máximos previos */
@@ -102,8 +102,23 @@ header {
     width: 45px; 
     height: 45px; 
     border-radius: 50%; 
-    background: var(--img-red); 
+    background-image: url(img/iconoperfil.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
     float: right;
+}
+
+.avatar-2 { 
+    width: 45px; 
+    height: 45px; 
+    border-radius: 50%; 
+    background-image: url(img/iconoperfil.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    /* Añade esto para centrarlo */
+    display: block;
+    margin: 0 auto 15px auto; 
 }
 
 .subtitle { 
@@ -1263,6 +1278,19 @@ header {
     height: 300px;
     background-color: var(--red); /* Tu fondo rojo */
     background-image: url(img/fuegosartificiales.jpg);
+    background-size: cover;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.event-header-img-nit {
+    width: 100%;
+    height: 300px;
+    background-color: var(--red); /* Tu fondo rojo */
+    background-image: url(img/dj.jpg);
     background-size: cover;
     position: relative;
     display: flex;
