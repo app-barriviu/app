@@ -29,7 +29,7 @@ html, body {
 /* Asegura que el contenido scrolleable use todo el ancho */
 .scrollable-content {
     width: 100% !important;
-    max-width: none !important;
+    max-width: none ;
     padding-left: 20px !important;
     padding-right: 20px !important;
 }
@@ -607,7 +607,7 @@ header {
     border: none;
     width: 40px;
     height: 40px;
-    border-radius: 12px;
+    border-radius: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -742,7 +742,7 @@ header {
     background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.7)), var(--img-red);
     position: relative;
     overflow: hidden;
-    background-image: url(img/nitacustica.jpg);
+    background-image: url(img/thethyetsgran.jpg);
     background-size: cover;
 }
 
@@ -755,7 +755,7 @@ header {
     background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.7)), var(--img-red);
     position: relative;
     overflow: hidden;
-    background-image: url(img/torneig\ almeda.jpg);
+    background-image: url(img/arbitrofoto.jpg);
     background-size: cover;
 }
 
@@ -768,7 +768,7 @@ header {
     background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.7)), var(--img-red);
     position: relative;
     overflow: hidden;
-    background-image: url(img/sosad.jpg);
+    background-image: url(img/conciertomanos.jpg);
     background-size: cover;
 }
 
@@ -1291,6 +1291,45 @@ header {
     height: 300px;
     background-color: var(--red); /* Tu fondo rojo */
     background-image: url(img/dj.jpg);
+    background-size: cover;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.event-header-img-mercat {
+    width: 100%;
+    height: 300px;
+    background-color: var(--red); /* Tu fondo rojo */
+    background-image: url(img/mercatambulant.jpg);
+    background-size: cover;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.event-header-img-basket {
+    width: 100%;
+    height: 300px;
+    background-color: var(--red); /* Tu fondo rojo */
+    background-image: url(img/basquet.jpg);
+    background-size: cover;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.event-header-img-sosadseguint {
+    width: 100%;
+    height: 300px;
+    background-color: var(--red); /* Tu fondo rojo */
+    background-image: url(img/conciertomanos.jpg);
     background-size: cover;
     position: relative;
     display: flex;
@@ -3555,4 +3594,44 @@ header {
 .toggle-btn.active {
     background: white;
     color: #2b44d2;
+}
+
+/* --- HEADER CENTRADO (CREAR ACTIVITAT) --- */
+.header-crear {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent !important;
+    padding: 15px 0 !important;
+    margin-bottom: 10px;
+    position: relative; /* Para asegurar el control del centro */
+}
+
+/* Forzamos que el H2 ocupe el espacio central y se alinee al medio */
+.header-crear h2 {
+    flex: 1;
+    text-align: center;
+    margin: 0 !important;
+    font-size: 1.3rem;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Ajuste para los iconos de los lados */
+.header-crear i {
+    font-size: 1.2rem;
+    cursor: pointer;
+    width: 40px; /* Ancho fijo para que el centro sea exacto */
+    display: flex;
+    align-items: center;
+}
+
+/* El icono de la derecha lo alineamos al final del todo */
+.header-crear i.fa-check {
+    justify-content: flex-end;
+}
+
+/* El icono de la izquierda al principio */
+.header-crear i.fa-arrow-left {
+    justify-content: flex-start;
 }
